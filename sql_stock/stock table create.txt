@@ -1,0 +1,1 @@
+ create table stock(stock_id int primary key, item_name varchar(20), expiry date, quantity int, price int, type varchar(20));
