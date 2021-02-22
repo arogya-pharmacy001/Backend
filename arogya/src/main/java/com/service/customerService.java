@@ -43,7 +43,7 @@ public class customerService {
 		}
 		else
 		{
-			return "RECOED NOT FOUND";
+			return "RECORD NOT FOUND";
 		}
 	}
 	public String deleteCustomer(int id)
