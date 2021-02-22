@@ -18,12 +18,13 @@ Table:Admin
 Entity:
 
 Table:Order
-Entity:Bill_Id(PK,Int)
-	Item_names(String)//
+Entity:Order_Id(PK,Int)
+	Items
 	Amount(int)//
-	Quantity(int)//
-	Cust_id(fun key)
-	stock_add(int fun key)
+	Bill_id(for key)
+	Cust_id(for key)
+	Order_date(date type)
+	
 */
 	
 Table:Stock (Medicines)//order will be placed here

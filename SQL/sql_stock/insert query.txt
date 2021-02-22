@@ -1,4 +1,4 @@
- insert into stock values(1001, "Metformin", "2022-02-22" , 10, 15, "tablet");
+insert into stock values(1001, "Metformin", "2022-02-22" , 10, 15, "tablet");
 
 insert into stock values(1002, "Paracetamol", "20-05-2022" , 12, 5, "tablet");
 
