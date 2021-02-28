@@ -1,0 +1,4 @@
+Supplier query to extract total amount based on month(we have to specify the date in order to fetch the total amount)
+we have only 1 supplier.
+
+select supplier_id,sum(quantity) as total_quantity,sum(price) as total_amount,date_format(expiry,'%y-%m') as deliverd  from supplier where delivery_date between "2021-02-01" and "2021-02-28";
