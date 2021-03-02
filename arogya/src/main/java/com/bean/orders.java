@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.data.domain.Sort;
+
 @Entity
 @Table(name="orders")
 public class orders {
