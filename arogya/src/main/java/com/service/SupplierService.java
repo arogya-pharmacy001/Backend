@@ -9,12 +9,15 @@ import org.springframework.stereotype.Service;
 import com.bean.Bill;
 import com.bean.Supplier;
 import com.dao.SupplierRepository;
+import com.dao.SupplierTallyDao;
 
 @Service
 public class SupplierService {
 
 	@Autowired
 	SupplierRepository supplierRepository;
+	@Autowired
+	SupplierTallyDao supplierTallyDao;
 
 
 public List<Supplier> displaySupplier()
@@ -27,5 +30,7 @@ public String addSupplier(Supplier sup)
 		supplierRepository.save(sup);
 		return "SUPPLIER DETAILS ADDED !";
 }
-
+public List<Supplier> getSupplierTallyDetails() {
+	return supplierTallyDao.getSupplierTally();
+}
 }
