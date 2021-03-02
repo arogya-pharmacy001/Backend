@@ -32,5 +32,10 @@ public class SupplierController {
 	public String addSupplier(@RequestBody Supplier sup) {
 		return supplierService.addSupplier(sup);
 	}
+	@GetMapping(value = "tally",produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Supplier> getSupplierTallyInfo(){
+		return supplierService.getSupplierTallyDetails();
+					
+	}
 
 }
