@@ -1,0 +1,22 @@
+<form #userref="ngForm" (ngSubmit)="checkuser(userref.value)">
+    <h1>Customer Log in</h1>
+    <div class="inset">
+    <p>
+      <label for="email">Username</label>
+      <input type="text" name="username" id="username" ngModel>
+    </p>
+    <p>
+      <label for="password">PASSWORD</label>
+      <input type="password" name="password" id="password" ngModel>
+    </p>
+    <p>
+      <input type="checkbox" name="remember" id="remember">
+      <label for="remember">Remember me </label>
+    </p>
+    </div>
+    <p class="p-container">
+      <span>Forgot password ?</span>
+      <input type="submit" name="go" id="go" value="Log in">
+      
+    </p>
+  </form>
