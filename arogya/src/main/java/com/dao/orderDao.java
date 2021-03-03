@@ -43,10 +43,10 @@ public class orderDao {
 	public List<orders> getAllOrdersSaleByMonth(int year, int month)
 	{
 		EntityManager em = factory.createEntityManager();
-		Query qry = em.createQuery("select p from orders where p.order_date like 'year-month-%'");
+		Query qry = em.createNativeQuery("select * from orders where order_date like 'year-month-%'");
 		
 		//select * from orders where order_date like '2020-12-%'
-		
+		//select p from orders where p.order_date like 'year-month-%'
 		List<orders> list = qry.getResultList();
 		return list;
 	}
