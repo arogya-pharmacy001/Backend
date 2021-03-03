@@ -75,7 +75,7 @@ public class orderService {
 
 	public List<orders> getAllOrdersByQuantity()
 	{
-		 return null;
+		// return null;
 			
 		
       //  return OR.findAll().stream().sorted().collect(Collectors.toList());
@@ -101,7 +101,7 @@ public class orderService {
 	*/
 		
 		
-		
+	  return ordao.getAllOrdersByQuantity();
 		
 	
 	}
@@ -109,13 +109,15 @@ public class orderService {
 	
 	public List<orders> getAllOrdersByDate()
 	{
-		return null;
+		
+		return ordao.getAllOrdersByDate();
 	}
 	
 	
 	public List<orders> getAllOrdersSaleByMonth(int year, int month)
 	{
-		return null;
+		return ordao.getAllOrdersSaleByMonth(year, month);
+		
 	}
 	
 	
