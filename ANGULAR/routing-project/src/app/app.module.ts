@@ -8,18 +8,22 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DisplayBillComponent } from './display-bill/display-bill.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     ContatusComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    DisplayBillComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,ReactiveFormsModule,
-    NgbModule
+    NgbModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
