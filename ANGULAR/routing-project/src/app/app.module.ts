@@ -10,7 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DisplayBillComponent } from './display-bill/display-bill.component';
 import { HttpClientModule } from '@angular/common/http';
+
 import { RegisterComponent } from './register/register.component';
+import { StockComponent } from './stock/stock.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     DashboardComponent,
     DisplayBillComponent,
-    RegisterComponent
+    RegisterComponent,
+    StockComponent
   ],
   imports: [
     BrowserModule,
