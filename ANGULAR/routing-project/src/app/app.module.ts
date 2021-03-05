@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DisplayBillComponent } from './display-bill/display-bill.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContatusComponent,
     LoginComponent,
     DashboardComponent,
-    DisplayBillComponent
+    DisplayBillComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

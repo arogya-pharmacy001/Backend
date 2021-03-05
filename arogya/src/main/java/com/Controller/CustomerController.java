@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import com.bean.Customer;
 import com.service.customerService;
 @RestController
 @RequestMapping(value="customer")
+@CrossOrigin
 public class CustomerController {
 	
 	
@@ -45,6 +47,22 @@ public class CustomerController {
 	public String deleteCust(@PathVariable("id") int cust_id)
 	{
 		return cs.deleteCustomer(cust_id);
+	}
+	
+	@GetMapping(value="sortbyid",produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Customer> getCustomerbyId()
+	{
+		return cs.sortById();
+	}
+	@GetMapping(value="sortbyname",produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Customer> getCustomerbyName()
+	{
+		return cs.sortByname();
+	}
+	@GetMapping(value="sortbyAdd",produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Customer> getCustomerbyAdd()
+	{
+		return cs.sortByAddress();
 	}
 	
 
