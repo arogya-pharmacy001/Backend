@@ -11,6 +11,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DisplayBillComponent } from './display-bill/display-bill.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StockComponent } from './stock/stock.component';
+import { StockUpdateComponent } from './stock-update/stock-update.component';
+import { StockDeleteComponent } from './stock-delete/stock-delete.component';
+import { StockInsertComponent } from './stock-insert/stock-insert.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { StockComponent } from './stock/stock.component';
     LoginComponent,
     DashboardComponent,
     DisplayBillComponent,
-    StockComponent
+    StockComponent,
+    StockUpdateComponent,
+    StockDeleteComponent,
+    StockInsertComponent
   ],
   imports: [
     BrowserModule,
