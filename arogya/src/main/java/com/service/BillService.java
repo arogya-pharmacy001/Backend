@@ -59,4 +59,14 @@ public class BillService {
 			return "BILL NOT FOUND, PLEASE ENTER THE VALID ID";
 		}
 	}
+	
+	public Bill findBillById(int bill_id) {
+		Optional<Bill> op= billRepository.findById(bill_id);
+		if(op.isPresent()) {
+			return op.get();
+		}else {
+			return null;
+		}
+	}
+	
 }

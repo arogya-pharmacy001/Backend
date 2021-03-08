@@ -1,0 +1,18 @@
+<div>
+    <h2>Update Bill Details</h2>
+    <form #billRef="ngForm" (ngSubmit)="updateBillInfo(billRef.value)">
+        <label>Bill Id</label>
+        <input type="number" name="bill_id" ngModel/><br/>
+        <label>Item Name</label>
+        <input type="text" name="item_name" ngModel/><br/>
+        <label>Amount</label>
+        <input type="number" name="amount" ngModel/><br/>
+        <label>Quantity</label>
+        <input type="number" name="quantity" ngModel/><br/>
+        <label>Customer ID</label>
+        <input type="number" name="cust_id" ngModel/><br/>
+        <input type="submit" value="Update Bill"/>
+        <input type="reset" value="reset"/>
+    </form>
+    {{msg}}
+</div>
