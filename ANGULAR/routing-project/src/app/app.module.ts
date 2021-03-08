@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RegisterComponent } from './register/register.component';
 import { StockComponent } from './stock/stock.component';
-
+//import {MyGuard} from './app.guard';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { StockComponent } from './stock/stock.component';
     FormsModule,ReactiveFormsModule,
     NgbModule,HttpClientModule
   ],
-  providers: [],
+  providers: [],//MyGuard
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

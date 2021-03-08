@@ -2,6 +2,9 @@ package com.Controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -65,5 +68,26 @@ public class CustomerController {
 		return cs.sortByAddress();
 	}
 	
+	@PostMapping(value="login",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
+	public Customer loginCustomer(@RequestBody Customer c,HttpServletRequest request)
+	{
+		Customer cust=cs.loginCustomer(c);
+		if(cust==null)
+		{
+			System.out.print("NULL CAME");
+			return null;
+			
+		}
+		else
+		{
+		HttpSession session=request.getSession();
+		session.setAttribute("username", cust.getCust_login());
+		session.setAttribute("password",cust.getPass());
+		System.out.print("RAN");
+		return cust;
+		}
+		
+		
+	}
 
 }
