@@ -45,5 +45,10 @@ public class BillController {
 	public String deleteBill(@PathVariable("id") int bill_id) {
 		return billService.deleteBill(bill_id);
 	}
+	
+	@GetMapping(value="findBill/{bill_id}",produces=MediaType.APPLICATION_JSON_VALUE)
+	public Bill getBillById(@PathVariable("bill_id") int bill_id) {
+		return billService.findBillById(bill_id);
+	}
 
 }

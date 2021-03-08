@@ -13,7 +13,18 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RegisterComponent } from './register/register.component';
 import { StockComponent } from './stock/stock.component';
+
 //import {MyGuard} from './app.guard';
+
+import { StoreBillComponent } from './store-bill/store-bill.component';
+import { UpdateBillComponent } from './update-bill/update-bill.component';
+import { DeleteBillComponent } from './delete-bill/delete-bill.component';
+import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.component';
+import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
+import { AddSupplierComponent } from './add-supplier/add-supplier.component';
+import { TallySupplierComponent } from './tally-supplier/tally-supplier.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +34,14 @@ import { StockComponent } from './stock/stock.component';
     DashboardComponent,
     DisplayBillComponent,
     RegisterComponent,
-    StockComponent
+    StockComponent,
+    StoreBillComponent,
+    UpdateBillComponent,
+    DeleteBillComponent,
+    BillFindByIdComponent,
+    DisplaySupplierComponent,
+    AddSupplierComponent,
+    TallySupplierComponent
   ],
   imports: [
     BrowserModule,
