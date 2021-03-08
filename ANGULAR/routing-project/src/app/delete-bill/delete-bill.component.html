@@ -1,0 +1,8 @@
+<div>
+    <h2>Delete Bill</h2> <br>
+    <label>Bill Id</label>
+    <input type="text" #bIdRef/>
+    <input type="button" value="Delete Bill" (click)="deleteBill(bIdRef.value)"/>
+    <br/>
+    {{msg}}
+</div>

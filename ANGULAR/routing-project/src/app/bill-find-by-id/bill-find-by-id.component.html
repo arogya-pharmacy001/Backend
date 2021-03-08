@@ -1,0 +1,9 @@
+<div>
+    <h2>Find Bill By Id</h2>
+    <label for="">Bill ID</label>
+    <input type="number" [(ngModel)]="bill_id" (keyup)="callService()"/>
+    {{msg}}
+    <div *ngIf="flag">
+        Id is {{billRef.bill_id}}, Name is {{billRef.item_name}}
+    </div>
+</div>

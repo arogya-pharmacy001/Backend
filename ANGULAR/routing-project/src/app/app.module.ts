@@ -10,10 +10,24 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DisplayBillComponent } from './display-bill/display-bill.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { RegisterComponent } from './register/register.component';
 import { StockComponent } from './stock/stock.component';
 import { StockUpdateComponent } from './stock-update/stock-update.component';
 import { StockDeleteComponent } from './stock-delete/stock-delete.component';
 import { StockInsertComponent } from './stock-insert/stock-insert.component';
+
+//import {MyGuard} from './app.guard';
+
+import { StoreBillComponent } from './store-bill/store-bill.component';
+import { UpdateBillComponent } from './update-bill/update-bill.component';
+import { DeleteBillComponent } from './delete-bill/delete-bill.component';
+import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.component';
+import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
+import { AddSupplierComponent } from './add-supplier/add-supplier.component';
+import { TallySupplierComponent } from './tally-supplier/tally-supplier.component';
+
+
 
 @NgModule({
   declarations: [
@@ -22,10 +36,22 @@ import { StockInsertComponent } from './stock-insert/stock-insert.component';
     LoginComponent,
     DashboardComponent,
     DisplayBillComponent,
+ 
     StockComponent,
     StockUpdateComponent,
     StockDeleteComponent,
     StockInsertComponent
+
+    RegisterComponent,
+    StockComponent,
+    StoreBillComponent,
+    UpdateBillComponent,
+    DeleteBillComponent,
+    BillFindByIdComponent,
+    DisplaySupplierComponent,
+    AddSupplierComponent,
+    TallySupplierComponent
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +59,8 @@ import { StockInsertComponent } from './stock-insert/stock-insert.component';
     FormsModule,ReactiveFormsModule,
     NgbModule,HttpClientModule
   ],
-  providers: [],
+  providers: [],//MyGuard
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
