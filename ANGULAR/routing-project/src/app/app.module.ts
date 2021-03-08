@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RegisterComponent } from './register/register.component';
 import { StockComponent } from './stock/stock.component';
+import { StockUpdateComponent } from './stock-update/stock-update.component';
+import { StockDeleteComponent } from './stock-delete/stock-delete.component';
+import { StockInsertComponent } from './stock-insert/stock-insert.component';
 
 //import {MyGuard} from './app.guard';
 
@@ -33,6 +36,12 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     LoginComponent,
     DashboardComponent,
     DisplayBillComponent,
+ 
+    StockComponent,
+    StockUpdateComponent,
+    StockDeleteComponent,
+    StockInsertComponent
+
     RegisterComponent,
     StockComponent,
     StoreBillComponent,
@@ -42,6 +51,7 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     DisplaySupplierComponent,
     AddSupplierComponent,
     TallySupplierComponent
+
   ],
   imports: [
     BrowserModule,

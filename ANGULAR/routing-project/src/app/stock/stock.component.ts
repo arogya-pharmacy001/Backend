@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { StockServiceService } from '../stock-service.service';
 import { Stock } from '../stock.model';
-import { stockservice } from '../stock.service';
+
 
 @Component({
   selector: 'app-stock',
@@ -11,7 +12,7 @@ import { stockservice } from '../stock.service';
 export class StockComponent implements OnInit {
 
   stockinfo:Array<Stock>=[];
-  constructor(public stockser:stockservice) { }
+  constructor(public stockser:StockServiceService) { }
 
   ngOnInit() {
   return this.stockser.loadstock().subscribe(data=>this.stockinfo=data);

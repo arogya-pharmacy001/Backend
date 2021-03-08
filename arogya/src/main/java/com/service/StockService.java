@@ -62,7 +62,7 @@ public class StockService {
 	{
 		Optional<Stock> op = stockRepository.findById(sk.getStock_id());
 		if(op.isPresent())
-		{
+		{    
 			stockRepository.saveAndFlush(sk);
 			return "Updated ";
 		}
