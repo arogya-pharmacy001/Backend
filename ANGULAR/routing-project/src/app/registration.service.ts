@@ -2,35 +2,27 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Customer } from './customer';
+import { Customer } from './customer.module';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegistrationService {
 
-  constructor(private http:HttpClient,private router:Router) { }
+  constructor(public http:HttpClient) { }
 
   private baseUrl="http://localhost:9191/customer/";
-  saveDetails(cust:Customer):Observable<any>
+  
+  checkLogin(customer:any):Observable<Customer>
   {
-    let url=this.baseUrl+"insert";
-    return this.http.post(url,cust);
+    return this.http.post<Customer>("http://localhost:9191/customer/login",customer)
   }
 
-  login():Observable<any>
+  addCustomer(customer:Customer):Observable<string>
   {
-    let cust
-    let url=this.baseUrl+"display";
-    return this.http.get(url,cust);
+      return this.http.post("http://localhost:9191/customer/insert",customer,{responseType:'text'})
   }
 
-
-  public InsertUserFromRemote(customer:Customer) :any
-  {
-    return this.http.post("http://localhost:9191/customer/insert",customer);
-
-
-  }
+  
 
 }

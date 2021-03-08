@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RegisterComponent } from './register/register.component';
 import { StockComponent } from './stock/stock.component';
+
+//import {MyGuard} from './app.guard';
+
 import { StoreBillComponent } from './store-bill/store-bill.component';
 import { UpdateBillComponent } from './update-bill/update-bill.component';
 import { DeleteBillComponent } from './delete-bill/delete-bill.component';
@@ -20,6 +23,7 @@ import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.compone
 import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
 import { AddSupplierComponent } from './add-supplier/add-supplier.component';
 import { TallySupplierComponent } from './tally-supplier/tally-supplier.component';
+
 
 
 @NgModule({
@@ -45,7 +49,8 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     FormsModule,ReactiveFormsModule,
     NgbModule,HttpClientModule
   ],
-  providers: [],
+  providers: [],//MyGuard
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

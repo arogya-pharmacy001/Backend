@@ -1,5 +1,5 @@
 
-  <form #userref="ngForm" (ngSubmit)="checkuser(userref.value)">
+  <form #userref="ngForm" (ngSubmit)="loginUser(userref.value)">
     <h1>Customer Log in</h1>
     <div class="inset">
     <p>
@@ -14,10 +14,29 @@
       <input type="checkbox" name="remember" id="remember">
       <label for="remember">Remember me </label>
     </p>
+
+
+    
+   <div class="custom-control custom-radio">
+    <input id="customer" type="radio" class="custom-control-input" value="customer" name="desg" ngModel>
+    <label class="custom-control-label" for="customer">customer</label>
+ </div>
+
+ <div class="custom-control custom-radio">
+    <input id="admin" type="radio" class="custom-control-input" value="admin" name="desg" ngModel>
+    <label class="custom-control-label" for="admin">admin</label>
+ </div>
+    
+    
+
+
+
     </div>
     <p class="p-container">
       <span>Forgot password ?</span>
       <input type="submit" name="go" id="go" value="Log in">
-      
+     <span>
+        <button class="btn btn-info" (click)="register()">register new user </button>
+        </span>
     </p>
   </form>

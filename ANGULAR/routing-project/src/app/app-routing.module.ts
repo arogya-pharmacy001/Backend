@@ -7,12 +7,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
+  {path:"\register",component:RegisterComponent},
 {path:"\login",component:LoginComponent},
 {path:"\aboutus",component:ContatusComponent},
-{path:"",redirectTo:"\login",pathMatch:"prefix"},
 {path:"\home",component:DashboardComponent},
 {path:"\bills",component:DisplayBillComponent},
-{path:"\register",component:RegisterComponent}
+
+{path:"\dashboard",component:DashboardComponent}
 
 
 ];
