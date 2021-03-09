@@ -16,6 +16,7 @@ import { StockComponent } from './stock/stock.component';
 import { StockUpdateComponent } from './stock-update/stock-update.component';
 import { StockDeleteComponent } from './stock-delete/stock-delete.component';
 import { StockInsertComponent } from './stock-insert/stock-insert.component';
+import { TestComponettComponent } from './test-componett/test-componett.component';
 
 //import {MyGuard} from './app.guard';
 
@@ -40,6 +41,10 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     StockComponent,
     StockUpdateComponent,
     StockDeleteComponent,
+
+    StockInsertComponent,
+    TestComponettComponent
+
     StockInsertComponent
 
     RegisterComponent,
@@ -51,6 +56,7 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     DisplaySupplierComponent,
     AddSupplierComponent,
     TallySupplierComponent
+
 
   ],
   imports: [
