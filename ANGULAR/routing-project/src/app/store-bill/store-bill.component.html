@@ -1,0 +1,18 @@
+<div>
+    <h2>Store Bills</h2>
+    <form [formGroup]="billInfo" (ngSubmit)="storeBillDetails()">
+        <label>Bill id</label>
+        <input type="number" formControlName="bill_id"/><br/>
+        <label>Item Name</label>
+        <input type="text" formControlName="item_name"/><br/>
+        <label>Amount</label>
+        <input type="number" formControlName="amount"/><br/>
+        <label>Quantity</label>
+        <input type="number" formControlName="quantity"/><br/>
+        <label>Customer Id</label>
+        <input type="number" formControlName="cust_id"/><br/>
+        <input type="submit" value="store Bill"/>
+        <input type="reset" value="reset"/>
+    </form>
+    {{msg}}
+</div>
