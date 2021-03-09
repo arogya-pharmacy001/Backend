@@ -14,6 +14,7 @@ import { StockComponent } from './stock/stock.component';
 import { StockUpdateComponent } from './stock-update/stock-update.component';
 import { StockDeleteComponent } from './stock-delete/stock-delete.component';
 import { StockInsertComponent } from './stock-insert/stock-insert.component';
+import { TestComponettComponent } from './test-componett/test-componett.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StockInsertComponent } from './stock-insert/stock-insert.component';
     StockComponent,
     StockUpdateComponent,
     StockDeleteComponent,
-    StockInsertComponent
+    StockInsertComponent,
+    TestComponettComponent
   ],
   imports: [
     BrowserModule,
