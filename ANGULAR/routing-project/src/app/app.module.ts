@@ -46,11 +46,15 @@ import { MyGuard } from './app.guard';
 
     StockInsertComponent,
 
+    TestComponettComponent,
+
+
 
     StockInsertComponent,
     TestComponettComponent
 
-    StockInsertComponent
+
+    StockInsertComponent,
 
 
     RegisterComponent,
