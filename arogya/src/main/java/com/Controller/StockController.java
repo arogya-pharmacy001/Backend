@@ -49,7 +49,17 @@ public class StockController {
 		
 	}
 
-
+	@GetMapping(value="displayname", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Stock> displayByname()
+	{
+		return ss.displayByName();
+	}
+	
+	@GetMapping(value="displaynamedesc", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Stock> displayBynameDesc()
+	{
+		return ss.displayByNameDesc();
+	}
 
 }
 

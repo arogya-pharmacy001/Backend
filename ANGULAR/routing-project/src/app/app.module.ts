@@ -27,6 +27,15 @@ import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.compone
 import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
 import { AddSupplierComponent } from './add-supplier/add-supplier.component';
 import { TallySupplierComponent } from './tally-supplier/tally-supplier.component';
+import { OrderDeleteComponent } from './order-delete/order-delete.component';
+import { OrderDisplayComponent } from './order-display/order-display.component';
+import { OrderInsertComponent } from './order-insert/order-insert.component';
+import { OrderUpdateComponent } from './order-update/order-update.component';
+import { OrderByQuantityComponent } from './order-by-quantity/order-by-quantity.component';
+import { OrderByDateSortComponent } from './order-by-date-sort/order-by-date-sort.component';
+import { OrderByYearMonthComponent } from './order-by-year-month/order-by-year-month.component';
+import { StockBynameComponent } from './stock-byname/stock-byname.component';
+import { StockBynamedescComponent } from './stock-bynamedesc/stock-bynamedesc.component';
 
 
 
@@ -43,9 +52,9 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     StockDeleteComponent,
 
     StockInsertComponent,
-    TestComponettComponent
+    TestComponettComponent,
 
-    StockInsertComponent
+   
 
     RegisterComponent,
     StockComponent,
@@ -55,7 +64,18 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     BillFindByIdComponent,
     DisplaySupplierComponent,
     AddSupplierComponent,
-    TallySupplierComponent
+    TallySupplierComponent,
+
+
+    OrderDeleteComponent,
+    OrderDisplayComponent,
+    OrderInsertComponent,
+    OrderUpdateComponent,
+    OrderByQuantityComponent,
+    OrderByDateSortComponent,
+    OrderByYearMonthComponent,
+    StockBynameComponent,
+    StockBynamedescComponent
 
 
   ],

@@ -10,12 +10,17 @@ import org.springframework.stereotype.Service;
 import com.bean.Stock;
 
 import com.dao.StockRepository;
+import com.dao.orderDao;
+import com.dao.stockDao;
 
 @Service
 public class StockService {
 
 	@Autowired
 	StockRepository stockRepository;
+	
+	@Autowired
+	stockDao stockdao;
 	
 	//add the record
 	public String addStock(Stock sk)
@@ -72,6 +77,14 @@ public class StockService {
 		}
 	}
 	
-	
+	public List<Stock> displayByName()
+	{
+		return stockdao.getAllStockByname();
+	}
+
+	public List<Stock> displayByNameDesc()
+	{
+		return stockdao.getAllStockBynameDesc();
+	}
 	
 }
