@@ -34,6 +34,16 @@ deleteStock(id:number):Observable<string>
 }  
 
 
+loadstockname():Observable<Stock[]>{
+  return this.httpClient.get<Stock[]>("http://localhost:9191/medstock/displayname");
+}
+
+loadstocknamedesc():Observable<Stock[]>{
+  return this.httpClient.get<Stock[]>("http://localhost:9191/medstock/displaynamedesc");
+}
+
+
+
 /*
 
 

@@ -1,0 +1,43 @@
+<div>
+    <h2>View OrderTable By Year and Month </h2>
+    <label>Year</label>
+    <input type="number" [(ngModel)]="oid1" ><br/>
+    <label>Month</label>
+    <input type="number" [(ngModel)]="oid2" ><br/>
+    
+    <input type="button" value="submit" "  (click)="orderbyyearmonth"><br/><br/><br/>
+    
+    <div>
+    <table border=1>
+            <tr>
+                <td>Order ID</td>
+                <td>ITEMS</td>
+                <td>AMOUNT</td>
+                <td>BILL ID</td>
+                <td>CUSTOMER ID</td>
+                <td>ORDER DATE</td>
+            </tr>
+            <tr *ngFor="let ord of order">
+                <td>{{Order.order_id}}</td>
+                <td>{{Order.items}}</td>
+                <td>{{Order.amount}}</td>
+                <td>{{Order.bill_id}}</td>
+                <td>{{Order.cust_id}}</td>
+                <td>{{Order.order_date}}</td>
+            </tr>
+
+    </table>
+</div>
+</div>
+
+<!--
+
+<div>
+    <h2>Delete Product By PId</h2>
+    <input type="text" #pIdRef/>
+    <input type="button" value="Delete Product" (click)="deleteProduct(pIdRef.value)"/>
+    <br/>
+    {{msg}}
+</div>
+
+-->
