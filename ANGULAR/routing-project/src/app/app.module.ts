@@ -43,9 +43,9 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     StockDeleteComponent,
 
     StockInsertComponent,
-    TestComponettComponent
+    TestComponettComponent,
 
-    StockInsertComponent
+    StockInsertComponent,
 
     RegisterComponent,
     StockComponent,
