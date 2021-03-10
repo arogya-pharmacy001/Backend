@@ -4,7 +4,7 @@ export class Customer
                 public cust_name?:string,
                 public cust_phone?:number,
                 public cust_addr?:string,
-                public cust_pass?:string,
+                public pass?:string,
                 public cust_login?:string
                ){}
 }

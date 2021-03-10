@@ -68,7 +68,7 @@ import { MyGuard } from './app.guard';
 
 
     StockInsertComponent,
-    TestComponettComponent
+    TestComponettComponent,
 
 
     StockInsertComponent,

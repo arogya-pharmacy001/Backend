@@ -4,6 +4,8 @@
     box-sizing: border-box;
     background: linear-gradient(to right, #1e3c72, #2a5298);
   }
+
+
   body {
     background: linear-gradient(to right, #1e3c72, #2a5298);
     justify-content: center;
@@ -19,6 +21,9 @@
     box-shadow: 0 50px 40px rgba(0,0,0,0.5), 0 20px 10px rgba(0,0,0,0.3);
     border-radius: 100%;
     overflow: hidden;
+    padding: 30px;
+    margin-top: 40px;
+    margin-left: 80px;
   }
   .moon {
     background: #ffa62b;

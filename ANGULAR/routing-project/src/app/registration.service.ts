@@ -18,11 +18,7 @@ export class RegistrationService {
     return this.http.post<Customer>("http://localhost:9191/customer/login",customer)
   }
 
-  addCustomer(customer:Customer):Observable<string>
-  {
-      return this.http.post("http://localhost:9191/customer/insert",customer,{responseType:'text'})
-  }
-
+  
   
 
 }

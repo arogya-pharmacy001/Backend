@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerServiceService } from '../customer-service.service';
+import { Customer } from '../customer.module';
 
 @Component({
   selector: 'app-test-componett',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponettComponent implements OnInit {
 
-  constructor() { }
+  msg:string=" ";
+  constructor(public reg:CustomerServiceService) { }
 
   ngOnInit(): void {
   }
+
+  addCustomerComponent(customer:Customer)
+  {
+    console.log(customer);
+    this.reg.addCustomer(customer).subscribe(data=>this.msg=data)
+  }
+
+
 
 }
