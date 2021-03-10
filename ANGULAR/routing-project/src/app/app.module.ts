@@ -17,7 +17,6 @@ import { StockUpdateComponent } from './stock-update/stock-update.component';
 import { StockDeleteComponent } from './stock-delete/stock-delete.component';
 import { StockInsertComponent } from './stock-insert/stock-insert.component';
 
-//import {MyGuard} from './app.guard';
 
 import { StoreBillComponent } from './store-bill/store-bill.component';
 import { UpdateBillComponent } from './update-bill/update-bill.component';
@@ -26,6 +25,9 @@ import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.compone
 import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
 import { AddSupplierComponent } from './add-supplier/add-supplier.component';
 import { TallySupplierComponent } from './tally-supplier/tally-supplier.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { MyGuard } from './app.guard';
 
 
 
@@ -40,7 +42,7 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     StockComponent,
     StockUpdateComponent,
     StockDeleteComponent,
-    StockInsertComponent
+    StockInsertComponent,
 
     RegisterComponent,
     StockComponent,
@@ -50,7 +52,9 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     BillFindByIdComponent,
     DisplaySupplierComponent,
     AddSupplierComponent,
-    TallySupplierComponent
+    TallySupplierComponent,
+    LandingPageComponent,
+    AdminDashboardComponent
 
   ],
   imports: [
@@ -59,7 +63,7 @@ import { TallySupplierComponent } from './tally-supplier/tally-supplier.componen
     FormsModule,ReactiveFormsModule,
     NgbModule,HttpClientModule
   ],
-  providers: [],//MyGuard
+  providers: [MyGuard],//MyGuard
 
   bootstrap: [AppComponent]
 })
