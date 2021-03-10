@@ -18,7 +18,6 @@ import { StockDeleteComponent } from './stock-delete/stock-delete.component';
 import { StockInsertComponent } from './stock-insert/stock-insert.component';
 import { TestComponettComponent } from './test-componett/test-componett.component';
 
-//import {MyGuard} from './app.guard';
 
 import { StoreBillComponent } from './store-bill/store-bill.component';
 import { UpdateBillComponent } from './update-bill/update-bill.component';
@@ -27,6 +26,7 @@ import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.compone
 import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
 import { AddSupplierComponent } from './add-supplier/add-supplier.component';
 import { TallySupplierComponent } from './tally-supplier/tally-supplier.component';
+
 import { OrderDeleteComponent } from './order-delete/order-delete.component';
 import { OrderDisplayComponent } from './order-display/order-display.component';
 import { OrderInsertComponent } from './order-insert/order-insert.component';
@@ -36,6 +36,11 @@ import { OrderByDateSortComponent } from './order-by-date-sort/order-by-date-sor
 import { OrderByYearMonthComponent } from './order-by-year-month/order-by-year-month.component';
 import { StockBynameComponent } from './stock-byname/stock-byname.component';
 import { StockBynamedescComponent } from './stock-bynamedesc/stock-bynamedesc.component';
+
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { MyGuard } from './app.guard';
+
 
 
 
@@ -52,9 +57,23 @@ import { StockBynamedescComponent } from './stock-bynamedesc/stock-bynamedesc.co
     StockDeleteComponent,
 
     StockInsertComponent,
+
     TestComponettComponent,
 
    
+
+
+    TestComponettComponent,
+
+
+
+    StockInsertComponent,
+    TestComponettComponent
+
+
+    StockInsertComponent,
+
+
 
     RegisterComponent,
     StockComponent,
@@ -67,6 +86,7 @@ import { StockBynamedescComponent } from './stock-bynamedesc/stock-bynamedesc.co
     TallySupplierComponent,
 
 
+
     OrderDeleteComponent,
     OrderDisplayComponent,
     OrderInsertComponent,
@@ -77,6 +97,10 @@ import { StockBynamedescComponent } from './stock-bynamedesc/stock-bynamedesc.co
     StockBynameComponent,
     StockBynamedescComponent
 
+    LandingPageComponent,
+    AdminDashboardComponent
+
+
 
   ],
   imports: [
@@ -85,7 +109,7 @@ import { StockBynamedescComponent } from './stock-bynamedesc/stock-bynamedesc.co
     FormsModule,ReactiveFormsModule,
     NgbModule,HttpClientModule
   ],
-  providers: [],//MyGuard
+  providers: [MyGuard],//MyGuard
 
   bootstrap: [AppComponent]
 })
