@@ -1,0 +1,30 @@
+CUSTOMER DASH:
+(STOCK)display prod with details 
+cart - ADD 
+step 1- bill is created
+step 2- order instance is added
+step 3- checkout
+
+login/register>>dashboard>>stocks(products)>>CART-bill
+login/register>>dashboard>>orders>>searchbyname 
+
+warning: 
+username- <must be 6chars >
+pass - <must be 8 chars with number>
+
+
+ADMIN DASHBOARD:
+ALL + bill crud
+all + customer crud
+all + order crud 
+all+ stock
+all + supplier
+
+Supplier dashboard
+
+LEFT: 
+//checkout part with a form 
+
+/xx,ehqi,21343,OD ,login,pass 
+/         Delete update 
+

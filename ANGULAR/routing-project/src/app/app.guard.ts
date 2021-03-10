@@ -1,4 +1,4 @@
-/*
+
 import {Injectable} from "@angular/core";
 import {CanActivate,Router} from "@angular/router";
 
@@ -17,10 +17,8 @@ export class MyGuard implements CanActivate
         }
         else{
 
-            this.router.navigate(["Login"]);
+            this.router.navigate(["login"]);
             return false;
         }
     }
 }
-
-*/
