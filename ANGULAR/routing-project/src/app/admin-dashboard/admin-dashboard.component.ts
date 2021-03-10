@@ -22,4 +22,11 @@ export class AdminDashboardComponent implements OnInit {
     this.router.navigate(["login"]);
   }
 
+  display = false;
+ onPress() {
+
+  this.router.navigate(["supplier"]);
+  
+ }
+
 }

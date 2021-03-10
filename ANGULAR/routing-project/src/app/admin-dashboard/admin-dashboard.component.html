@@ -16,7 +16,7 @@
               <a class="nav-link" routerLink="stocks"  class="text-white">Stock</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" routerLink="supplier"  class="text-white">Supplier</a>
+              <a class="nav-link" routerLink="supplier"  class="text-white" (click)="onPress()">Supplier</a>
               </li>
           </ul>
           <input type="button" class="btn btn text-bold btn-danger text-white" value="Logout" (click)="logout()" />
@@ -28,6 +28,13 @@
       <div name="body" id="body" style="background:linear-gradient(to right, #1e3c72, #2a5298)">
 
         
+        
+          <button (click)="onPress()"></button>
+      
+      
+      <div id="comp-render" *ngIf="display">
+          <app-display-supplier></app-display-supplier>
+      </div>
 
 
 

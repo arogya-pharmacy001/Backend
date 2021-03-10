@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
          
        
         this.customer.cust_login=user;
-        this.customer.cust_pass=pass;
+        this.customer.pass=pass;
     
         this.reg_service.checkLogin(this.customer).subscribe(obj=>{
           if(obj==null)

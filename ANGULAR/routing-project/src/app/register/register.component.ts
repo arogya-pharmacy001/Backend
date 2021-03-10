@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerServiceService } from '../customer-service.service';
 import { Customer } from '../customer.module';
 import { RegistrationService } from '../registration.service';
 
@@ -9,7 +10,7 @@ import { RegistrationService } from '../registration.service';
 })
 export class RegisterComponent implements OnInit {
 msg:string="";
-  constructor(public registerService:RegistrationService) { }
+  constructor(public registerService:CustomerServiceService) { }
 
   ngOnInit(): void {
   }
