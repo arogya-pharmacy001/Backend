@@ -10,11 +10,17 @@ import { OrderServiceService } from '../order.service.service';
 })
 export class OrderDisplayComponent implements OnInit {
 
+  flag:boolean=false
   orders:Array<Order>=[];
   constructor(public orderSer:OrderServiceService,public router:Router) { }
 
   ngOnInit() {
 
+  
+  }
+
+  loadData(){
+    this.flag=true
     return this.orderSer.displayOrders().subscribe(data=>this.orders=data);
   }
 

@@ -12,12 +12,17 @@ import { Stock } from '../stock.model';
 
 export class StockComponent implements OnInit {
 
+  flag:boolean=false
   stockinfo:Array<Stock>=[];
   constructor(public stockser:StockServiceService,public router:Router) { }
 
   ngOnInit() {
-  return this.stockser.loadstock().subscribe(data=>this.stockinfo=data);
 
+  }
+
+  loadData(){
+    this.flag=true
+    return this.stockser.loadstock().subscribe(data=>this.stockinfo=data);
   }
 
 }
