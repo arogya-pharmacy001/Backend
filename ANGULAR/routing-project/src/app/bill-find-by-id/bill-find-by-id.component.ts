@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Bill } from '../bill.model';
 import { BillService } from '../bill.service';
 
@@ -13,7 +14,7 @@ export class BillFindByIdComponent implements OnInit {
   bill_id : number=0;
   msg:string=""
   flag:boolean=false;
-  constructor(public billService : BillService) { }
+  constructor(public billService : BillService,public router:Router) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +32,10 @@ export class BillFindByIdComponent implements OnInit {
         this.billRef=data;        
       }
     })
+  }
+
+  onpress(){
+    this.router.navigate(["adminDashboard"])
   }
 
 }
