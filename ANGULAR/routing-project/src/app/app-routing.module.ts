@@ -8,7 +8,20 @@ import { DisplayBillComponent } from './display-bill/display-bill.component';
 import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
+import { OrderByDateSortComponent } from './order-by-date-sort/order-by-date-sort.component';
+import { OrderByQuantityComponent } from './order-by-quantity/order-by-quantity.component';
+import { OrderByYearMonthComponent } from './order-by-year-month/order-by-year-month.component';
+import { OrderDeleteComponent } from './order-delete/order-delete.component';
+import { OrderDisplayComponent } from './order-display/order-display.component';
+import { OrderInsertComponent } from './order-insert/order-insert.component';
+import { OrderUpdateComponent } from './order-update/order-update.component';
 import { RegisterComponent } from './register/register.component';
+import { StockBynameComponent } from './stock-byname/stock-byname.component';
+import { StockBynamedescComponent } from './stock-bynamedesc/stock-bynamedesc.component';
+import { StockDeleteComponent } from './stock-delete/stock-delete.component';
+import { StockInsertComponent } from './stock-insert/stock-insert.component';
+import { StockUpdateComponent } from './stock-update/stock-update.component';
+import { StockComponent } from './stock/stock.component';
 import { TestComponettComponent } from './test-componett/test-componett.component';
 
 const routes: Routes = [
@@ -22,8 +35,20 @@ const routes: Routes = [
 {path:"\dashboard",component:DashboardComponent},
 {path:"\adminDashboard",component:AdminDashboardComponent},
 {path:"test",component:TestComponettComponent},
-{path:"\supplier",component:DisplaySupplierComponent}
-
+{path:"\supplier",component:DisplaySupplierComponent},
+{path:"\stockdisplay",component:StockComponent},
+{path:"\stockbyname",component:StockBynameComponent},
+{path:"\stockbynamedesc",component:StockBynamedescComponent},
+{path:"\stockdelete",component:StockDeleteComponent},
+{path:"\stockinsert",component:StockInsertComponent},
+{path:"\stockupdate",component:StockUpdateComponent},
+{path:"\orderupdate",component:OrderUpdateComponent},
+{path:"\orderinsert",component:OrderInsertComponent},
+{path:"\orderdisplay",component:OrderDisplayComponent},
+{path:"\orderdelete",component:OrderDeleteComponent},
+{path:"\orderdisplayquan",component:OrderByQuantityComponent},
+{path:"\orderdatesort",component:OrderByDateSortComponent},
+{path:"\orderyearmonthdisplay",component:OrderByYearMonthComponent}
 
 
 ];

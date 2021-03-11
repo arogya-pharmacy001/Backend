@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { StockServiceService } from '../stock-service.service';
 
 @Component({
@@ -19,7 +20,7 @@ export class StockInsertComponent implements OnInit {
     });
 
 msg:string="";
-  constructor(public productSer:StockServiceService) { }
+  constructor(public productSer:StockServiceService,public router:Router) { }
 
   ngOnInit(): void {
   }

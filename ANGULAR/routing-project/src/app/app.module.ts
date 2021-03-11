@@ -95,7 +95,7 @@ import { MyGuard } from './app.guard';
     OrderByDateSortComponent,
     OrderByYearMonthComponent,
     StockBynameComponent,
-    StockBynamedescComponent
+    StockBynamedescComponent,
 
     LandingPageComponent,
     AdminDashboardComponent

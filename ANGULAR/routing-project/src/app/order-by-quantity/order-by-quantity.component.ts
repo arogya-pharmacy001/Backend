@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Order } from '../order.model';
 import { OrderServiceService } from '../order.service.service';
 
@@ -10,7 +11,7 @@ import { OrderServiceService } from '../order.service.service';
 export class OrderByQuantityComponent implements OnInit {
 
   orders:Array<Order>=[];
-  constructor(public orderSer:OrderServiceService) { }
+  constructor(public orderSer:OrderServiceService,public router:Router) { }
 
   ngOnInit() {
 
