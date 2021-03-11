@@ -73,10 +73,11 @@ public class BillService {
 		}
 	}
 	
-	public String addToBillTable(int bid)
+	public String addToBillTable(int bid,int cid)
 	{
 		
-		if(bd.addToBill(bid)==2)
+		int c=bd.addToBill(bid,cid);
+		if(c==2)
 		{
 			return "stock not found ";
 		}

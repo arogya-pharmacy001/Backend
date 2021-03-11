@@ -43,4 +43,54 @@ onPressFind(){
   this.router.navigate(['findbills'])
 }
 
+onPressStockDisplay(){
+  this.router.navigate(["stockdisplay"])
+}
+onPressStockStore(){
+  this.router.navigate(["stockinsert"])
+}
+onPressStockUpdate(){
+  this.router.navigate(["stockupdate"])
+}
+onPressStockDelete(){
+  this.router.navigate(["stockdelete"])
+}
+onPressStockDisplayAsc(){
+  this.router.navigate(["stockbyname"])
+}
+onPressStockDisplayDsc(){
+  this.router.navigate(["stockbynamedesc"])
+}
+
+onPressOrderDisplay(){
+  this.router.navigate(["orderdisplay"])
+}
+onPressOrderStore(){
+  this.router.navigate(["orderinsert"])
+}
+onPressOrderUpdate(){
+  this.router.navigate(["orderupdate"])
+}
+onPressOrderDelete(){
+  this.router.navigate(["orderdelete"])
+}
+onPressOrderDisplayDsc(){
+  this.router.navigate(["orderdisplayquan"])
+}
+onPressOrderDisplayDate(){
+  this.router.navigate(["orderdatesort"])
+}
+onPressOrderDisplayYear(){
+  this.router.navigate(["orderyearmonthdisplay"])
+}
+
+onPressSupplierDisplay(){
+  this.router.navigate(["supplierdisplay"])
+}
+onPressSupplierStore(){
+  this.router.navigate(["supplierinsert"])
+}
+onPressSupplierMonthEnd(){
+  this.router.navigate(["suppliermonthendtally"])
+}
 }

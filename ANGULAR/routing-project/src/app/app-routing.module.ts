@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { TestComponentRenderer } from '@angular/core/testing';
 import { RouterModule, Routes } from '@angular/router';
+import { AddSupplierComponent } from './add-supplier/add-supplier.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.component';
 import { ContatusComponent } from './contatus/contatus.component';
@@ -27,6 +28,7 @@ import { StockUpdateComponent } from './stock-update/stock-update.component';
 import { StockComponent } from './stock/stock.component';
 
 import { StoreBillComponent } from './store-bill/store-bill.component';
+import { TallySupplierComponent } from './tally-supplier/tally-supplier.component';
 
 import { TestComponettComponent } from './test-componett/test-componett.component';
 import { UpdateBillComponent } from './update-bill/update-bill.component';
@@ -49,6 +51,7 @@ const routes: Routes = [
 {path:"\stockdelete",component:StockDeleteComponent},
 {path:"\stockinsert",component:StockInsertComponent},
 {path:"\stockupdate",component:StockUpdateComponent},
+
 {path:"\orderupdate",component:OrderUpdateComponent},
 {path:"\orderinsert",component:OrderInsertComponent},
 {path:"\orderdisplay",component:OrderDisplayComponent},
@@ -61,7 +64,11 @@ const routes: Routes = [
 {path:"\storebills",component:StoreBillComponent},
 {path:"\alterbills",component:UpdateBillComponent},
 {path:"\deletebills",component:DeleteBillComponent},
-{path:"\findbills",component:BillFindByIdComponent}
+{path:"\findbills",component:BillFindByIdComponent},
+
+{path:"\supplierdisplay",component:DisplaySupplierComponent},
+{path:"\supplierinsert",component:AddSupplierComponent},
+{path:"\suppliermonthendtally",component:TallySupplierComponent}
 
 
 

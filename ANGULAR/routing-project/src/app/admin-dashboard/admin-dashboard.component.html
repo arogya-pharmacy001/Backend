@@ -13,11 +13,43 @@
             </li>
 
             <li class="nav-item mx-3">
-              <a class="nav-link" routerLink="stocks"  class="text-white">Stock</a>
+              <div class="dropdown">
+                <button class="dropbtn">Stocks</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockDisplay()">Display Stocks</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockStore()">Store Stock</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockUpdate()">Update Stock</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockDelete()">Delete Stock</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockDisplayAsc()">Display Stock In Ascending</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockDisplayDsc()">Display Stock In Descending</a>
+                </div>
+              </div>
             </li>
 
             <li class="nav-item mx-3">
-              <a class="nav-link" routerLink="supplier"  class="text-white" (click)="onPress()">Supplier</a>
+              <div class="dropdown">
+                <button class="dropbtn">Orders</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDisplay()">Display Orders</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderStore()">Store Order</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderUpdate()">Update Order</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDelete()">Delete Order</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDisplayDsc()">Display Order In Desccending</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDisplayDate()">Display Based on Date</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDisplayYear()">Display Based on Year and Month</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item mx-3">
+              <div class="dropdown">
+                <button class="dropbtn">Supplier</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierDisplay()">Display Supplier</a>
+                  <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierStore()">Store Supplier</a>
+                  <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierMonthEnd()">Month end Tally</a>
+                </div>
+              </div>
             </li>
             
             <li class="nav-item mx-3">
@@ -32,27 +64,13 @@
                 </div>
               </div>
             </li>
+
+           
             
           </ul>
           <input type="button" class="btn btn text-bold btn-danger text-white" value="Logout" (click)="logout()" /> 
         </div>
     </nav>
-
-      <div name="body" id="body" style="background:linear-gradient(to right, #1e3c72, #2a5298)">
-
-
-        
-        
-          <button (click)="onPress()"></button>
-      
-      
-      <div id="comp-render" *ngIf="display">
-          <app-display-supplier></app-display-supplier>
-      </div>
-
-
-
-      </div>
 
 
 <!--
@@ -61,10 +79,11 @@
 <h2>Routing Links </h2>
   <a routerLink="stockdisplay">STOCK DISPLAY</a><br/>
   <a routerLink="stockbyname">STOCK DISPLAY ASCENDING</a><br/>
-  <a routerLink="stockbynamedesc">STOCK DISPLAY DESCENDING</a><br/>
+  <a routerLink="stockbynamedesc">STOCK DISPLAY DESCENDING</a><br/> 
   <a routerLink="stockdelete">STOCK DELETE</a><br/>
   <a routerLink="stockinsert">STOCK INSERT</a><br/>
   <a routerLink="stockupdate">STOCK UPDATE</a><br/>
+
   <a routerLink="orderupdate">ORDER UPDATE</a><br/>
   <a routerLink="orderinsert">ORDER INSERT</a><br/>
   <a routerLink="orderdisplay">ORDER DISPLAY</a><br/>
@@ -75,6 +94,7 @@
   <hr/>
 
    -->
+
 
 
 
