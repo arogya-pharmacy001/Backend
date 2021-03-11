@@ -16,12 +16,16 @@ export class OrderDisplayComponent implements OnInit {
 
   ngOnInit() {
 
+
+   this.orderSer.displayOrders().subscribe(data=>this.orders=data);
+
   
   }
 
   loadData(){
     this.flag=true
     return this.orderSer.displayOrders().subscribe(data=>this.orders=data);
+
   }
 
 
