@@ -25,8 +25,8 @@ public class stockDao {
 	  public List<Stock> getAllStockByname()
 	{
 		EntityManager emf = factory.createEntityManager();
-		Query qry = emf.createNativeQuery("select * from stock order by item_name");
-		
+		//Query qry = emf.createNativeQuery("select * from stock order by item_name");
+		Query qry =emf.createQuery("select s from stock s order by item_name");
 		
 		List<Stock> list = qry.getResultList();
 		return list;
@@ -38,8 +38,8 @@ public class stockDao {
 	  public List<Stock> getAllStockBynameDesc()
 	{
 		EntityManager emf = factory.createEntityManager();
-		Query qry = emf.createNativeQuery("select * from stock order by item_name desc");
-		
+		//Query qry = emf.createNativeQuery("select * from stock order by item_name desc");
+		Query qry =emf.createQuery("select s from stock s order by item_name desc");
 		
 		List<Stock> list = qry.getResultList();
 		return list;

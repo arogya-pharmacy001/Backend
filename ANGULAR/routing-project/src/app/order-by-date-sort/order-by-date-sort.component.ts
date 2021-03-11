@@ -9,12 +9,14 @@ import { OrderServiceService } from '../order.service.service';
   styleUrls: ['./order-by-date-sort.component.css']
 })
 export class OrderByDateSortComponent implements OnInit {
-  orders:Array<Order>=[];
+  ordersqw:Array<Order>=[];
   constructor(public orderSer:OrderServiceService,public router:Router) { }
 
-  ngOnInit() {
+  ngOnInit():void {
     this.orderSer.displayAllOrdersByDate().subscribe(data=>console.log(data));
-    return this.orderSer.displayAllOrdersByDate().subscribe(data=>this.orders=data);
-  }
+   this.orderSer.displayAllOrdersByDate().subscribe(data=>this.ordersqw=data);
+  
+  //this.orderSer.displayOrders().subscribe(data=>this.ordersqw=data);
+}
 
 }

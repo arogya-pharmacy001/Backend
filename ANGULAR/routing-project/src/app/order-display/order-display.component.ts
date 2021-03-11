@@ -15,7 +15,7 @@ export class OrderDisplayComponent implements OnInit {
 
   ngOnInit() {
 
-    return this.orderSer.displayOrders().subscribe(data=>this.orders=data);
+   this.orderSer.displayOrders().subscribe(data=>this.orders=data);
   }
 
 

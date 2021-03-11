@@ -55,7 +55,7 @@ const routes: Routes = [
 {path:"\orderdelete",component:OrderDeleteComponent},
 {path:"\orderdisplayquan",component:OrderByQuantityComponent},
 {path:"\orderdatesort",component:OrderByDateSortComponent},
-{path:"\orderyearmonthdisplay",component:OrderByYearMonthComponent}
+{path:"\orderyearmonthdisplay",component:OrderByYearMonthComponent},
 
 {path:"\displaybills",component:DisplayBillComponent},
 {path:"\storebills",component:StoreBillComponent},
