@@ -5,7 +5,7 @@
     <label>Month</label>
     <input type="number" [(ngModel)]="oid2" ><br/>
     
-    <input type="button" value="submit" "  (click)="orderbyyearmonth"><br/><br/><br/>
+    <input type="button" value="submit" (click)="orderbyyearmonth"/><br/><br/><br/>
     
     <div>
     <table border=1>
@@ -17,13 +17,14 @@
                 <td>CUSTOMER ID</td>
                 <td>ORDER DATE</td>
             </tr>
-            <tr *ngFor="let ord of order">
-                <td>{{Order.order_id}}</td>
-                <td>{{Order.items}}</td>
-                <td>{{Order.amount}}</td>
-                <td>{{Order.bill_id}}</td>
-                <td>{{Order.cust_id}}</td>
-                <td>{{Order.order_date}}</td>
+            
+            <tr *ngFor="let ord of orders">
+                <td>{{ord.order_id}}</td>
+                <td>{{ord.items}}</td>
+                <td>{{ord.amount}}</td>
+                <td>{{ord.bill_id}}</td>
+                <td>{{ord.cust_id}}</td>
+                <td>{{ord.order_date}}</td>
             </tr>
 
     </table>
