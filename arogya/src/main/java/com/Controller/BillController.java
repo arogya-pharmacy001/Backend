@@ -25,6 +25,8 @@ public class BillController {
 	@Autowired
 	BillService billService;
 	
+	
+	
 	@GetMapping(value="display",produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<Bill> getAllbill(){
 		return billService.displayBill();
@@ -49,6 +51,14 @@ public class BillController {
 	@GetMapping(value="findBill/{bill_id}",produces=MediaType.APPLICATION_JSON_VALUE)
 	public Bill getBillById(@PathVariable("bill_id") int bill_id) {
 		return billService.findBillById(bill_id);
+	}
+	
+	@GetMapping(value="cart/{stock_id}/{customer_id}",produces = MediaType.TEXT_PLAIN_VALUE)
+	public String addToCart(@PathVariable ("stock_id") int sid,@PathVariable("customer_id") int cid)
+	{
+		String res= billService.addToBillTable(sid,cid);
+		return res;
+	
 	}
 
 }

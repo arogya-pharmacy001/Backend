@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bean.Bill;
+import com.dao.BillDao;
 import com.dao.BillRepository;
 
 @Service
@@ -14,6 +15,9 @@ public class BillService {
 
 	@Autowired
 	BillRepository billRepository;
+	
+	@Autowired
+	BillDao bd;
 	public String addBill(Bill bi)
 	{
 		Optional<Bill> bl=billRepository.findById(bi.getBill_id());
@@ -66,6 +70,19 @@ public class BillService {
 			return op.get();
 		}else {
 			return null;
+		}
+	}
+	
+	public String addToBillTable(int bid)
+	{
+		
+		if(bd.addToBill(bid)==2)
+		{
+			return "stock not found ";
+		}
+		else
+		{
+			return "item added to bill"; 
 		}
 	}
 	
