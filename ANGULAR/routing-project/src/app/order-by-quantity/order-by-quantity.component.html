@@ -1,6 +1,6 @@
 <div>
     <h2>OrderTable By Quantity Decending </h2><div>
-    <table border=1>
+        <table border=1>
             <tr>
                 <td>Order ID</td>
                 <td>ITEMS</td>
@@ -9,7 +9,7 @@
                 <td>CUSTOMER ID</td>
                 <td>ORDER DATE</td>
             </tr>
-            <tr *ngFor="let ord of order">
+            <tr *ngFor="let Order of orders">
                 <td>{{Order.order_id}}</td>
                 <td>{{Order.items}}</td>
                 <td>{{Order.amount}}</td>

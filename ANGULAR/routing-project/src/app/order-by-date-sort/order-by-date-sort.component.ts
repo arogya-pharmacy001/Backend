@@ -12,7 +12,7 @@ export class OrderByDateSortComponent implements OnInit {
   constructor(public orderSer:OrderServiceService) { }
 
   ngOnInit() {
-
+    this.orderSer.displayAllOrdersByDate().subscribe(data=>console.log(data));
     return this.orderSer.displayAllOrdersByDate().subscribe(data=>this.orders=data);
   }
 

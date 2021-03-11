@@ -9,7 +9,7 @@
                 <td>CUSTOMER ID</td>
                 <td>ORDER DATE</td>
             </tr>
-            <tr *ngFor="let ord of order">
+            <tr *ngFor="let Order of orders">
                 <td>{{Order.order_id}}</td>
                 <td>{{Order.items}}</td>
                 <td>{{Order.amount}}</td>
@@ -17,6 +17,7 @@
                 <td>{{Order.cust_id}}</td>
                 <td>{{Order.order_date}}</td>
             </tr>
+          
 
     </table>
 </div>
