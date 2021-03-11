@@ -13,9 +13,11 @@ export class OrderByQuantityComponent implements OnInit {
   orders:Array<Order>=[];
   constructor(public orderSer:OrderServiceService,public router:Router) { }
 
+  public obj = new Order();
+
   ngOnInit() {
 
-     this.orderSer.displayByQuantity().subscribe(data=>this.orders=data);
+    return this.orderSer.displayByQuantity().subscribe(data=>this.orders=data);
   }
 
 }

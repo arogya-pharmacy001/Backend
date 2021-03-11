@@ -10,22 +10,36 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-3">
               <a class="nav-link link" routerLink="Customer"  class="text-white">Customer</a>
-            
             </li>
+
             <li class="nav-item mx-3">
               <a class="nav-link" routerLink="stocks"  class="text-white">Stock</a>
             </li>
+
             <li class="nav-item mx-3">
               <a class="nav-link" routerLink="supplier"  class="text-white" (click)="onPress()">Supplier</a>
-              </li>
+            </li>
+            
+            <li class="nav-item mx-3">
+              <div class="dropdown">
+                <button class="dropbtn">Bills</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressDisplay()">Display Bills</a>
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressStore()">Store Bill</a>
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressUpdate()">Update Bill</a>
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressDelete()">Delete Bill</a>
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressFind()">Find Bill</a>
+                </div>
+              </div>
+            </li>
+            
           </ul>
-          <input type="button" class="btn btn text-bold btn-danger text-white" value="Logout" (click)="logout()" />
-    
-         
+          <input type="button" class="btn btn text-bold btn-danger text-white" value="Logout" (click)="logout()" /> 
         </div>
-      </nav>
+    </nav>
 
       <div name="body" id="body" style="background:linear-gradient(to right, #1e3c72, #2a5298)">
+
 
         
         
@@ -67,6 +81,7 @@
 
 
     <hr>
+
     <router-outlet></router-outlet>
-    </div>
+</div>
     

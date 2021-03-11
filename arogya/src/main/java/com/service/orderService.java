@@ -78,7 +78,7 @@ public class orderService {
 		// return null;
 			
 		
-      //  return OR.findAll().stream().sorted().collect(Collectors.toList());
+       // return OR.findAll().stream().sorted().collect(Collectors.toList());
 		
 	//return OR.findAll().stream().filter(ord->ord.getAmount()>ord.getAmount()).collect(Collectors.toList());
 		     
@@ -99,9 +99,10 @@ public class orderService {
 	
 	OR.findAll().forEach(ordrec::add);
 	*/
+		//System.out.println(OR.findAll().stream().sorted().collect(Collectors.toList()));
 		
 		
-	  return ordao.getAllOrdersByQuantity();
+	 return ordao.getAllOrdersByQuantity();
 		
 	
 	}

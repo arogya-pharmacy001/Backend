@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BillService } from '../bill.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class StoreBillComponent implements OnInit {
 	quantity : new FormControl(),
 	cust_id : new FormControl()
   })
-  constructor(public billService : BillService) { }
+  constructor(public billService : BillService, public router : Router) { }
 
   ngOnInit(): void {
   }
@@ -27,4 +28,7 @@ export class StoreBillComponent implements OnInit {
     this.billService.storeBillInfo(billRef).subscribe(result=>this.msg=result);
   }
 
+  onpress(){
+    this.router.navigate(["adminDashboard"])
+  }
 }

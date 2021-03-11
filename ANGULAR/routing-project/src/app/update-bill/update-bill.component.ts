@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BillService } from '../bill.service';
 
 @Component({
@@ -9,13 +10,17 @@ import { BillService } from '../bill.service';
 export class UpdateBillComponent implements OnInit {
 
   msg:string=""
-  constructor(public billService : BillService) { }
+  constructor(public billService : BillService,public router:Router) { }
 
   ngOnInit(): void {
   }
 
   updateBillInfo(billInfo:any){
     this.billService.updateBillInfo(billInfo).subscribe(data=>this.msg=data);
+  }
+
+  onpress(){
+    this.router.navigate(["adminDashboard"])
   }
 
 }
