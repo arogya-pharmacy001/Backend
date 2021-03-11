@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StockServiceService } from '../stock-service.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { StockServiceService } from '../stock-service.service';
 export class StockDeleteComponent implements OnInit {
 
   
-  constructor(public productSer:StockServiceService) { }
+  constructor(public productSer:StockServiceService,public router:Router) { }
   
   msg:string="";
 

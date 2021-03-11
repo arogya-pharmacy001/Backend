@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { OrderServiceService } from '../order.service.service';
 
@@ -11,7 +12,7 @@ export class OrderDeleteComponent implements OnInit {
 
   msg:string="";
 
-  constructor(public orderSer:OrderServiceService) { }
+  constructor(public orderSer:OrderServiceService,public router:Router) { }
 
   ngOnInit(): void {
   }

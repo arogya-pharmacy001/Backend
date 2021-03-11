@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { OrderServiceService } from '../order.service.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class OrderInsertComponent implements OnInit {
 
   msg:string="";
 
-  constructor(public orderSer:OrderServiceService) { }
+  constructor(public orderSer:OrderServiceService,public router:Router) { }
 
   ngOnInit(): void {
   }
