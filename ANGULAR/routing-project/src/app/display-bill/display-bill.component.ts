@@ -11,10 +11,20 @@ import { BillService } from '../bill.service';
 export class DisplayBillComponent implements OnInit {
 
   billInfo:Array<Bill>=[];
+  flag:boolean=false;
   constructor(public billService:BillService,public router:Router) { }
 
   ngOnInit(): void {
+    
+  }
+
+  loadData(){
+    this.flag=true;
     this.billService.loadBillDetails().subscribe(data=>this.billInfo=data);
   }
+
+  onpress(){
+    this.router.navigate(["adminDashboard"])
+ }
 
 }

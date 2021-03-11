@@ -24,9 +24,23 @@ export class AdminDashboardComponent implements OnInit {
 
   display = false;
  onPress() {
-
   this.router.navigate(["supplier"]);
-  
  }
+
+ onPressDisplay(){
+   this.router.navigate(["displaybills"])
+ }
+ onPressStore(){
+  this.router.navigate(['storebills'])
+}
+onPressUpdate(){
+  this.router.navigate(['alterbills'])
+}
+onPressDelete(){
+  this.router.navigate(['deletebills'])
+}
+onPressFind(){
+  this.router.navigate(['findbills'])
+}
 
 }
