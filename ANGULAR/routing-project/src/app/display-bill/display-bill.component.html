@@ -1,13 +1,13 @@
 <div>
-    <h1>Bill Details</h1>
+    <h1>Customer Bill Details</h1>
     <div>
-        <table border=1>
+        <table id="bills">
             <tr>
-                <th>Bill_ID</th>
-                <th>Item_Name</th>
+                <th>Bill ID</th>
+                <th>Item Name</th>
                 <th>Amount</th>
                 <th>Quantity</th>
-                <th>Customer_ID</th>
+                <th>Customer ID</th>
             </tr>
 
             <tr *ngFor="let bill of billInfo">

@@ -1,15 +1,15 @@
 
-  <form #userref="ngForm" (ngSubmit)="loginUser(userref.value)">
+  <form #loginRef="ngForm" (ngSubmit)="loginUser(loginRef.value)">
     <h1>Customer Log in</h1>
     <div class="inset">
-    <p>
-      <label for="email">Username</label>
-      <input type="text" name="username" id="username" ngModel>
-    </p>
-    <p>
+    
+      <label for="username">Username</label>
+      <input type="text"  name="username" ngModel >
+
       <label for="password">PASSWORD</label>
-      <input type="password" name="password" id="password" ngModel>
-    </p>
+      <input type="password" name="password" id="password"  ngModel>
+     
+    
     <p>
       <input type="checkbox" name="remember" id="remember">
       <label for="remember">Remember me </label>
@@ -27,14 +27,10 @@
     <label class="custom-control-label" for="admin">admin</label>
  </div>
     
-    
-
-
-
     </div>
     <p class="p-container">
       <span>Forgot password ?</span>
-      <input type="submit" name="go" id="go" value="Log in">
+      <input type="submit" value="submit" [disabled]="!loginRef.valid">
      <span>
         <button class="btn btn-info" (click)="register()">register new user </button>
         </span>

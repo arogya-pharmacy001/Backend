@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Customer } from '../customer.module';
-
+import {NgForm} from '@angular/forms';
 import { RegistrationService } from '../registration.service';
 
 @Component({
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
          
        
         this.customer.cust_login=user;
-        this.customer.cust_pass=pass;
+        this.customer.pass=pass;
     
         this.reg_service.checkLogin(this.customer).subscribe(obj=>{
           if(obj==null)
