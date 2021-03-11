@@ -43,7 +43,7 @@ public class BillService {
 		if(bl.isPresent())
 		{
 			billRepository.saveAndFlush(bi);
-			return "BILL UPDATED "+bi.getBill_id();
+			return "BILL NUMBER "+bi.getBill_id()+" UPDATED ";
 		}
 		else
 		{
