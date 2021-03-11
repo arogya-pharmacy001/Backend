@@ -31,8 +31,8 @@ export class LoginComponent implements OnInit {
       loginUser(userData:any)
       {
 
-        let user=userData.username;
-        let pass=userData.password;
+        let user=userData.cust_login;
+        let pass=userData.pass;
         let desig=userData.desg;
         console.log(user+" "+pass);
          
