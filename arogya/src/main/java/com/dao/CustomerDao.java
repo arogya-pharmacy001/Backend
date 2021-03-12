@@ -31,6 +31,7 @@ public class CustomerDao {
 	{
 		EntityManager emf=fact.createEntityManager();
 		Query qr=emf.createNativeQuery("select * from customer order by cust_name");
+	
 		
 		 List<Customer> list=qr.getResultList();
 		 return list;

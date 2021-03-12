@@ -9,8 +9,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-3">
-              <a class="nav-link link" routerLink="Customer"  class="text-white">Customer</a>
+              <div class="dropdown">
+                <button class="dropbtn">Customer</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="onPressCustomerDisplay()">Display Customer</a>
+                  <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="onPressCustomerStore()">Delete Customer</a>
+              
+                </div>
+              </div>
             </li>
+
+
+            
 
             <li class="nav-item mx-3">
               <div class="dropdown">
@@ -47,7 +57,7 @@
                 <div class="dropdown-content">
                   <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierDisplay()">Display Supplier</a>
                   <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierStore()">Store Supplier</a>
-                  <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierMonthEnd()">Month end Tally</a>
+                  <!-- <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierMonthEnd()">Month end Tally</a> -->
                 </div>
               </div>
             </li>
@@ -60,7 +70,7 @@
                   <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressStore()">Store Bill</a>
                   <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressUpdate()">Update Bill</a>
                   <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressDelete()">Delete Bill</a>
-                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressFind()">Find Bill</a>
+                  <!-- <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressFind()">Find Bill</a> -->
                 </div>
               </div>
             </li>
