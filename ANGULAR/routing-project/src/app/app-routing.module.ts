@@ -8,7 +8,9 @@ import { ContatusComponent } from './contatus/contatus.component';
 import { CustomerCartComponent } from './customer-cart/customer-cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DeleteBillComponent } from './delete-bill/delete-bill.component';
+import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
 import { DisplayBillComponent } from './display-bill/display-bill.component';
+import { DisplayCustomerComponent } from './display-customer/display-customer.component';
 import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
@@ -70,7 +72,13 @@ const routes: Routes = [
 {path:"\supplierdisplay",component:DisplaySupplierComponent},
 {path:"\supplierinsert",component:AddSupplierComponent},
 {path:"\suppliermonthendtally",component:TallySupplierComponent},
+
+
+{path:"\customerdisplay",component:DisplayCustomerComponent},
+{path:"\customerdelete",component:DeleteCustomerComponent}
+
 {path:"\cart",component:CustomerCartComponent}
+
 
 
 

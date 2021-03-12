@@ -23,9 +23,7 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   display = false;
- onPress() {
-  this.router.navigate(["supplier"]);
- }
+
 
  onPressDisplay(){
    this.router.navigate(["displaybills"])
@@ -92,5 +90,12 @@ onPressSupplierStore(){
 }
 onPressSupplierMonthEnd(){
   this.router.navigate(["suppliermonthendtally"])
+}
+
+onPressCustomerDisplay(){
+  this.router.navigate(["customerdisplay"])
+}
+onPressCustomerStore(){
+  this.router.navigate(["customerdelete"])
 }
 }
