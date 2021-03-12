@@ -5,6 +5,7 @@ import { AddSupplierComponent } from './add-supplier/add-supplier.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.component';
 import { ContatusComponent } from './contatus/contatus.component';
+import { CustomerCartComponent } from './customer-cart/customer-cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DeleteBillComponent } from './delete-bill/delete-bill.component';
 import { DisplayBillComponent } from './display-bill/display-bill.component';
@@ -68,7 +69,8 @@ const routes: Routes = [
 
 {path:"\supplierdisplay",component:DisplaySupplierComponent},
 {path:"\supplierinsert",component:AddSupplierComponent},
-{path:"\suppliermonthendtally",component:TallySupplierComponent}
+{path:"\suppliermonthendtally",component:TallySupplierComponent},
+{path:"\cart",component:CustomerCartComponent}
 
 
 
