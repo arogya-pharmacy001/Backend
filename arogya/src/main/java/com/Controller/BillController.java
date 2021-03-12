@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bean.Bill;
+import com.bean.cart;
 import com.service.BillService;
 
 @CrossOrigin
@@ -53,12 +54,16 @@ public class BillController {
 		return billService.findBillById(bill_id);
 	}
 	
-	@GetMapping(value="cart/{stock_id}/{customer_id}",produces = MediaType.TEXT_PLAIN_VALUE)
-	public String addToCart(@PathVariable ("stock_id") int sid,@PathVariable("customer_id") int cid)
+	@PostMapping(value="cart",consumes = MediaType.APPLICATION_JSON_VALUE)
+	public int addToCart(@RequestBody cart ct)
 	{
-		String res= billService.addToBillTable(sid,cid);
+		int res= billService.addToBillTable(ct);
 		return res;
 	
+	}
+	@GetMapping(value="findcust/{cust_id}",produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Bill> getBillbyCustID(@PathVariable("cust_id") int cust_id) {
+		return billService.findBycustIdservice(cust_id);
 	}
 
 }
