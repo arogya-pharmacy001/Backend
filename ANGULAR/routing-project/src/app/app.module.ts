@@ -40,6 +40,8 @@ import { StockBynamedescComponent } from './stock-bynamedesc/stock-bynamedesc.co
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { MyGuard } from './app.guard';
+import { CustomerCartComponent } from './customer-cart/customer-cart.component';
+
 
 
 
@@ -98,7 +100,9 @@ import { MyGuard } from './app.guard';
     StockBynamedescComponent,
 
     LandingPageComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    CustomerCartComponent,
+  
 
 
 

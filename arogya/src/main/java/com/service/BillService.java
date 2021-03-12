@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bean.Bill;
+import com.bean.cart;
 import com.dao.BillDao;
 import com.dao.BillRepository;
 
@@ -73,18 +74,16 @@ public class BillService {
 		}
 	}
 	
-	public String addToBillTable(int bid,int cid)
+	public int addToBillTable(cart cv)
 	{
 		
-		int c=bd.addToBill(bid,cid);
-		if(c==2)
-		{
-			return "stock not found ";
-		}
-		else
-		{
-			return "item added to bill"; 
-		}
+		 return bd.addToBill(cv);
+		
+	}
+	
+	public List<Bill> findBycustIdservice(int cust_id) {
+		return bd.findBycust_id(cust_id);
+		
 	}
 	
 }
