@@ -10,6 +10,7 @@ import { BillService } from '../bill.service';
 })
 export class BillFindByIdComponent implements OnInit {
 
+  billInfo:Array<Bill>=[]
   billRef = new Bill();
   bill_id : number=0;
   msg:string=""
@@ -17,21 +18,37 @@ export class BillFindByIdComponent implements OnInit {
   constructor(public billService : BillService,public router:Router) { }
 
   ngOnInit(): void {
+    // this.billService.findBillById(this.bill_id).subscribe(data=> {
+    //   if(data==null){
+    //   this.msg = "Record not found";
+    //   this.flag = false;
+    
+    //   }else {
+    //     this.msg = "";
+    //     this.flag = true;
+    //     this.billRef=data;        
+    //   }
+    // })
   }
 
-  callService() {
-    //console.log("Event fired "+this.pid)
-    this.billService.findBillById(this.bill_id).subscribe(data=> {
-      if(data==null){
-      this.msg = "Record not found";
-      this.flag = false;
+  // callService() {
+  //   //console.log("Event fired "+this.pid)
+  //   this.billService.findBillById(this.bill_id).subscribe(data=> {
+  //     if(data==null){
+  //     this.msg = "Record not found";
+  //     this.flag = false;
     
-      }else {
-        this.msg = "";
-        this.flag = true;
-        this.billRef=data;        
-      }
-    })
+  //     }else {
+  //       this.msg = "";
+  //       this.flag = true;
+  //       this.billRef=data;        
+  //     }
+  //   })
+  // }
+
+  findProduct(bid:any){
+    console.log(bid);
+    this.billService.findBillInfo(bid).subscribe(result=>this.msg=result);
   }
 
   onpress(){

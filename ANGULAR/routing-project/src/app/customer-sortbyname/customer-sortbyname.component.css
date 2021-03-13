@@ -1,5 +1,5 @@
 h1{
-    padding-top: 100px;
+    padding-top: 50px;
    text-align: center;
 }
 #bills {
@@ -47,6 +47,6 @@ input[type=button] {
   padding-left: 30px;
   padding-right: 30px;
   width: auto;
-  margin-left: 565px;
+  margin-left: 500px;
   border-radius: 6px;
 }

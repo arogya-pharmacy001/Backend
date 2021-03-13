@@ -27,7 +27,7 @@ export class BillService {
     return this.httpClient.delete("http://localhost:9191/bill/delete/"+bill_id,{responseType:'text'})
   }
 
-  findBillById(bill_id:any):Observable<any>{
+  findBillInfo(bill_id:any):Observable<any>{
     return this.httpClient.get("http://localhost:9191/bill/findBill/"+bill_id);
   }
 

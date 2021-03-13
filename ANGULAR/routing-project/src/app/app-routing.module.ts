@@ -6,6 +6,9 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.component';
 import { ContatusComponent } from './contatus/contatus.component';
 import { CustomerCartComponent } from './customer-cart/customer-cart.component';
+import { CustomerSortbyaddressComponent } from './customer-sortbyaddress/customer-sortbyaddress.component';
+import { CustomerSortbyidComponent } from './customer-sortbyid/customer-sortbyid.component';
+import { CustomerSortbynameComponent } from './customer-sortbyname/customer-sortbyname.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DeleteBillComponent } from './delete-bill/delete-bill.component';
 import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
@@ -37,7 +40,7 @@ import { TestComponettComponent } from './test-componett/test-componett.componen
 import { UpdateBillComponent } from './update-bill/update-bill.component';
 
 const routes: Routes = [
-  {path:"register",component:RegisterComponent},
+{path:"register",component:RegisterComponent},
 {path:"\login",component:LoginComponent},
 {path:"\aboutus",component:ContatusComponent},
 {path:"\home",component:DashboardComponent},
@@ -67,7 +70,7 @@ const routes: Routes = [
 {path:"\storebills",component:StoreBillComponent},
 {path:"\alterbills",component:UpdateBillComponent},
 {path:"\deletebills",component:DeleteBillComponent},
-{path:"\findbills",component:BillFindByIdComponent},
+
 
 {path:"\supplierdisplay",component:DisplaySupplierComponent},
 {path:"\supplierinsert",component:AddSupplierComponent},
@@ -75,7 +78,10 @@ const routes: Routes = [
 
 
 {path:"\customerdisplay",component:DisplayCustomerComponent},
-{path:"\customerdelete",component:DeleteCustomerComponent}
+{path:"\customerdelete",component:DeleteCustomerComponent},
+{path:"\customerbyid",component:CustomerSortbyidComponent},
+{path:"\customerbyname",component:CustomerSortbynameComponent},
+{path:"\customerbyaddress",component:CustomerSortbyaddressComponent},
 
 {path:"\cart",component:CustomerCartComponent}
 

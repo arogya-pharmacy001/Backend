@@ -38,7 +38,7 @@ onPressDelete(){
   this.router.navigate(['deletebills'])
 }
 onPressFind(){
-  this.router.navigate(['findbills'])
+  this.router.navigate(['billid'])
 }
 
 onPressStockDisplay(){
@@ -97,5 +97,14 @@ onPressCustomerDisplay(){
 }
 onPressCustomerStore(){
   this.router.navigate(["customerdelete"])
+}
+onPressCustomerId(){
+  this.router.navigate(["customerbyid"])
+}
+onPressCustomerName(){
+  this.router.navigate(["customerbyname"])
+}
+onPressCustomerAddress(){
+  this.router.navigate(["customerbyaddress"])
 }
 }
