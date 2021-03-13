@@ -18,4 +18,19 @@ export class CustomerService {
     console.log(cust_id)
     return this.httpclient.delete("http://localhost:9191/customer/delete/"+cust_id,{responseType:'text'})
     }
+
+  loadCustomerDetailsBasedOnAddress():Observable<Customer[]>{
+      return this.httpclient.get<Customer[]>("http://localhost:9191/customer/sortbyAdd")
+  }
+
+  
+  loadCustomerDetailsBasedOnId():Observable<Customer[]>{
+    return this.httpclient.get<Customer[]>("http://localhost:9191/customer/sortbyid")
+  }
+  
+
+  
+  loadCustomerDetailsBasedOnName():Observable<Customer[]>{
+    return this.httpclient.get<Customer[]>("http://localhost:9191/customer/sortbyname")
+  }
 }

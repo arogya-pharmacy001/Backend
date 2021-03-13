@@ -45,6 +45,9 @@ import { DisplayCustomerComponent } from './display-customer/display-customer.co
 import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
 
 import { CustomerCartComponent } from './customer-cart/customer-cart.component';
+import { CustomerSortbyaddressComponent } from './customer-sortbyaddress/customer-sortbyaddress.component';
+import { CustomerSortbyidComponent } from './customer-sortbyid/customer-sortbyid.component';
+import { CustomerSortbynameComponent } from './customer-sortbyname/customer-sortbyname.component';
 
 
 
@@ -108,9 +111,15 @@ import { CustomerCartComponent } from './customer-cart/customer-cart.component';
     AdminDashboardComponent,
 
     DisplayCustomerComponent,
-    DeleteCustomerComponent
+    DeleteCustomerComponent,
 
     CustomerCartComponent,
+
+    CustomerSortbyaddressComponent,
+
+    CustomerSortbyidComponent,
+
+    CustomerSortbynameComponent,
   
 
 
