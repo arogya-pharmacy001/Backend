@@ -15,13 +15,11 @@ export class DisplayBillComponent implements OnInit {
   constructor(public billService:BillService,public router:Router) { }
 
   ngOnInit(): void {
-    
-  }
-
-  loadData(){
     this.flag=true;
     this.billService.loadBillDetails().subscribe(data=>this.billInfo=data);
   }
+
+ 
 
   onpress(){
     this.router.navigate(["adminDashboard"])

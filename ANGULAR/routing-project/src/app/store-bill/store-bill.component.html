@@ -1,18 +1,19 @@
-<div>
+<div class=container>
     <h2>Store Bills</h2>
     <form [formGroup]="billInfo" (ngSubmit)="storeBillDetails()">
-        <label>Bill id</label>
+        <label>Bill id</label><br>
         <input type="number" formControlName="bill_id"/><br/>
-        <label>Item Name</label>
+        <label>Item Name</label><br>
         <input type="text" formControlName="item_name"/><br/>
-        <label>Amount</label>
+        <label>Amount</label><br>
         <input type="number" formControlName="amount"/><br/>
-        <label>Quantity</label>
+        <label>Quantity</label><br>
         <input type="number" formControlName="quantity"/><br/>
-        <label>Customer Id</label>
+        <label>Customer Id</label><br>
         <input type="number" formControlName="cust_id"/><br/>
+        <br>
         <input type="submit" value="store Bill"/>
-        <input type="reset" value="reset"/>
+      
         <input type="button" value="back" (click)="onpress()">
     </form>
     {{msg}}

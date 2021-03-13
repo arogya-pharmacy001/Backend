@@ -41,6 +41,16 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { MyGuard } from './app.guard';
 
+import { DisplayCustomerComponent } from './display-customer/display-customer.component';
+import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
+
+import { CustomerCartComponent } from './customer-cart/customer-cart.component';
+import { CustomerSortbyaddressComponent } from './customer-sortbyaddress/customer-sortbyaddress.component';
+import { CustomerSortbyidComponent } from './customer-sortbyid/customer-sortbyid.component';
+import { CustomerSortbynameComponent } from './customer-sortbyname/customer-sortbyname.component';
+
+
+
 
 
 
@@ -98,7 +108,20 @@ import { MyGuard } from './app.guard';
     StockBynamedescComponent,
 
     LandingPageComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+
+    DisplayCustomerComponent,
+    DeleteCustomerComponent,
+
+    CustomerCartComponent,
+
+    CustomerSortbyaddressComponent,
+
+    CustomerSortbyidComponent,
+
+    CustomerSortbynameComponent,
+  
+
 
 
 

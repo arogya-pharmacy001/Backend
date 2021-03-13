@@ -30,7 +30,9 @@ public class CustomerDao {
 	public List<Customer> sortByName()
 	{
 		EntityManager emf=fact.createEntityManager();
-		Query qr=emf.createNativeQuery("select * from customer order by cust_name");
+//		Query qr=emf.createNativeQuery("select * from customer order by cust_name");
+		Query qr=emf.createQuery("select c from Customer c order by cust_name ");
+	
 		
 		 List<Customer> list=qr.getResultList();
 		 return list;
@@ -39,7 +41,8 @@ public class CustomerDao {
 	public List<Customer> sortByAddr()
 	{
 		EntityManager emf=fact.createEntityManager();
-		Query qr=emf.createNativeQuery("select * from customer order by cust_addr");
+//		Query qr=emf.createNativeQuery("select * from customer order by cust_addr");
+		Query qr=emf.createQuery("select c from Customer c order by cust_addr ");
 		
 		 List<Customer> list=qr.getResultList();
 		 return list;
@@ -48,7 +51,8 @@ public class CustomerDao {
 	public List<Customer> sortById()
 	{
 		EntityManager emf=fact.createEntityManager();
-		Query qr=emf.createNativeQuery(" select * from customer order by cust_id");
+//		Query qr=emf.createNativeQuery(" select * from customer order by cust_id");
+		Query qr=emf.createQuery("select c from Customer c order by cust_id");
 		
 		 List<Customer> list=qr.getResultList();
 		 return list;

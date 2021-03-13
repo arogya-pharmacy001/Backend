@@ -1,5 +1,10 @@
+
 <div>
     <h2 class=header>Stock Table</h2><div>
+
+
+   <!-- <h2>Stock Table</h2><div>
+
      <input type="button" value="display stocks" (click)="loadData()">
      <div *ngIf="flag">
         <!--<table border=1>-->
@@ -22,7 +27,30 @@
             </tr>
 
         </table>
+    </div> 
+    -->
+   <h1>Listed Products:</h1>  
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+        <div class="row">
+            <div class="col-md-4 mt-2"  *ngFor="let Stock of stockinfo">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-img-actions"> <img src="../../assets/medicine.jpg" class="card-img img-fluid" width="96" height="35" alt=""> </div>
+                    </div>
+                    <div class="card-body bg-light text-center">
+                        <div class="mb-2">
+                            <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true">{{Stock.type}}</a> </h6> <a href="#" class="text-muted" data-abc="true">{{Stock.expiry}}</a>
+                        </div>
+                        <h3 class="mb-0 font-weight-semibold">{{Stock.item_name}}</h3>
+                        <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                        <div class="text-muted mb-3">{{Stock.quantity}}</div> <button type="button" class="btn bg-cart" (click)="add(Stock.stock_id,customer.cust_id)"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
     </div>
+
     <br>
     <input type="button" value="Back" (click)="onpress()">
 </div>

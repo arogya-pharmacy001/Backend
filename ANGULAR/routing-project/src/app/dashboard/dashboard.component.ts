@@ -27,6 +27,11 @@ customer=new Customer;
       this.router.navigate(["login"]);
     }
 
+    tocart()
+    {
+      this.router.navigate(["cart"]);
+    }
+
 
   
 

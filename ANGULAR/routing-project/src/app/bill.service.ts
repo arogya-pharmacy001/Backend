@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Bill } from './bill.model';
+import {cart} from './cart.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,17 @@ export class BillService {
     return this.httpClient.delete("http://localhost:9191/bill/delete/"+bill_id,{responseType:'text'})
   }
 
-  findBillById(bill_id:any):Observable<any>{
+  findBillInfo(bill_id:any):Observable<any>{
     return this.httpClient.get("http://localhost:9191/bill/findBill/"+bill_id);
+  }
+
+  addToCart(cartref:any):Observable<any>
+  {
+    return this.httpClient.post("http://localhost:9191/bill/cart",cartref,{responseType:'text'});
+  }
+
+  findBillbyCustId(id:any):Observable<any>
+  {
+    return this.httpClient.get("http://localhost:9191/bill/findcust/"+id);
   }
 }
