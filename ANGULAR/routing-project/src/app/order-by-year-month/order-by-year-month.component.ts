@@ -28,5 +28,8 @@ orderbyyearmonth(year:any,month:any)
   return this.orderSer.displayByYearMonth(year,month).subscribe(data=>this.orders=data);
 
 }
+onpress(){
+  this.router.navigate(["adminDashboard"])  
 
+}
 }

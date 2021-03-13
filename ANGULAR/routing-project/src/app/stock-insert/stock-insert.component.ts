@@ -32,5 +32,8 @@ storeProductDetails()
  return this.productSer.insertstock(ProductRef).subscribe(data=>this.msg=data);
 
 }
+onpress(){
+  this.router.navigate(["adminDashboard"])  
 
+}
 }

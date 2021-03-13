@@ -1,4 +1,4 @@
-<div>
+<div class=container>
     <h2>Store Product Details</h2>
     <form [formGroup]="productInfo" (ngSubmit)="storeProductDetails()">
         <label>Stock id</label>
@@ -14,7 +14,8 @@
         <label>Type</label>
         <input type="text" formControlName="type"/><br/>
         <input type="submit" value="store product info"/>
-        <input type="reset" value="reset"/>
+        <input type="reset" value="reset"/><br/><br/>
+        <input type="button" value="back" (click)="onpress()">
     </form>
     {{msg}}
 </div>

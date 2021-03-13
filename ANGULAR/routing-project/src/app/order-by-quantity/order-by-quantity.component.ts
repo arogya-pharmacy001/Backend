@@ -20,4 +20,8 @@ export class OrderByQuantityComponent implements OnInit {
      this.orderSer.displayByQuantity().subscribe(data=>this.orders=data);
   }
 
+  onpress(){
+    this.router.navigate(["adminDashboard"])  
+ 
+  }
 }

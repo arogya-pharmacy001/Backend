@@ -19,4 +19,8 @@ export class OrderByDateSortComponent implements OnInit {
   //this.orderSer.displayOrders().subscribe(data=>this.ordersqw=data);
 }
 
+onpress(){
+  this.router.navigate(["adminDashboard"])  
+
+}
 }

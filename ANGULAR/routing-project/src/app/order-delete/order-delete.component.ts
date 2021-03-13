@@ -22,5 +22,8 @@ export class OrderDeleteComponent implements OnInit {
   {
       return this.orderSer.deleteOrders(id).subscribe(data=>this.msg=data);
   }
-
+  onpress(){
+    this.router.navigate(["adminDashboard"])  
+ 
+  }
 }

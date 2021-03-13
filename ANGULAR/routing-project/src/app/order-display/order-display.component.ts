@@ -27,7 +27,10 @@ export class OrderDisplayComponent implements OnInit {
     return this.orderSer.displayOrders().subscribe(data=>this.orders=data);
 
   }
-
+  onpress(){
+    this.router.navigate(["adminDashboard"])  
+ 
+  }
 
 
 }

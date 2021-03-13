@@ -1,4 +1,4 @@
-<div>
+<div class=container>
     <h2>Update Product Price</h2>
     <form #productRef="ngForm" (ngSubmit)="updateProductInfo(productRef.value)">
         <label>Stock id</label>
@@ -6,7 +6,8 @@
         <label>Price</label>
         <input type="number" name="price" ngModel/><br/>
         <input type="submit" value="Update Price"/>
-        <input type="reset" value="reset"/>
+        <input type="reset" value="reset"/><br/><br/>
+        <input type="button" value="back" (click)="onpress()">
     </form>
     {{msg}}
 </div>
