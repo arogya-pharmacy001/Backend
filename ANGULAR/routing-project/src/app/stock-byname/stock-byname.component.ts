@@ -21,7 +21,7 @@ export class StockBynameComponent implements OnInit {
 
   stockByName()
   {
-    
+    this.stockSer.loadstock().subscribe(data=>console.log(data));
     return this.stockSer.loadstockname().subscribe(data=>this.stocks=data);
   }
 

@@ -18,6 +18,7 @@ public class StockService {
 
 	@Autowired
 	StockRepository stockRepository;
+	Stock sk;
 	
 	@Autowired
 	stockDao stockdao;

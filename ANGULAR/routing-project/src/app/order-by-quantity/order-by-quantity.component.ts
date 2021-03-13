@@ -15,9 +15,9 @@ export class OrderByQuantityComponent implements OnInit {
 
   public obj = new Order();
 
-  ngOnInit() {
+  ngOnInit():void {
 
-    return this.orderSer.displayByQuantity().subscribe(data=>this.orders=data);
+     this.orderSer.displayByQuantity().subscribe(data=>this.orders=data);
   }
 
 }
