@@ -32,5 +32,8 @@ orderinsert()
   let ordRef= new this.orderInfo.value;
   return this.orderSer.insertOrders(ordRef).subscribe(data=>this.msg=data);
 }
+onpress(){
+  this.router.navigate(["adminDashboard"])  
 
+}
 }

@@ -21,5 +21,8 @@ export class StockDeleteComponent implements OnInit {
     
     this.productSer.deleteStock(id).subscribe(result=>this.msg=result);
   }
-
+  onpress(){
+    this.router.navigate(["adminDashboard"])  
+ 
+  }
 }

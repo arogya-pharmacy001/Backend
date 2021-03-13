@@ -37,6 +37,13 @@ export class StockComponent implements OnInit {
     return this.stockser.loadstock().subscribe(data=>this.stockinfo=data);
   }
 
+
+  onpress(){
+    this.router.navigate(["adminDashboard"])  
+ 
+  }
+  
+
   add(cart_id:any,cust:any)
   {
 
@@ -54,5 +61,6 @@ export class StockComponent implements OnInit {
   }
 
  
+
 
 }

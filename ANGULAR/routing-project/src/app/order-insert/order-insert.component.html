@@ -1,4 +1,4 @@
-<div>
+<div class=container>
     <h2>Store Order Details</h2>
     <form [formGroup]="orderInfo" (ngSubmit)="orderinsert()">
         <label>Order id</label>
@@ -14,7 +14,8 @@
         <label>Order Date</label>
         <input type="date" formControlName="order_date"/><br/>
         <input type="submit" value="store product info"/>
-        <input type="reset" value="reset"/>
+        <input type="reset" value="reset"/><br/><br/>
+        <input type="button" value="back" (click)="onpress()">
     </form>
     {{msg}}
 </div>

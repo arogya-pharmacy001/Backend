@@ -25,5 +25,8 @@ export class StockBynamedescComponent implements OnInit {
     
     return this.stockSer.loadstockname().subscribe(data=>this.stocks=data);
   }
-
+  onpress(){
+    this.router.navigate(["adminDashboard"])  
+ 
+  }
 }

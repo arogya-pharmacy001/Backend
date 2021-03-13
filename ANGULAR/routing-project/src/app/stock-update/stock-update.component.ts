@@ -19,4 +19,8 @@ export class StockUpdateComponent implements OnInit {
     
     this.productSer.updateStock(productInfo).subscribe(data=>this.msg=data);
   }
+  onpress(){
+    this.router.navigate(["adminDashboard"])  
+ 
+  }
 }

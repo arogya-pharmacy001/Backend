@@ -29,8 +29,11 @@ msg:string="";
 storeProductDetails()
 {
   let ProductRef= this.productInfo.value;
-  this.productSer.insertstock(ProductRef).subscribe(data=>this.msg=data);
+ return this.productSer.insertstock(ProductRef).subscribe(data=>this.msg=data);
 
 }
+onpress(){
+  this.router.navigate(["adminDashboard"])  
 
+}
 }

@@ -34,5 +34,8 @@ updateOrder(productInfo:any)
 */
 this.orderSer.updateOrders(productInfo).subscribe(data=>this.msg=data);
 }
+onpress(){
+  this.router.navigate(["adminDashboard"])  
 
+}
 }

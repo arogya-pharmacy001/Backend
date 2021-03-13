@@ -1,7 +1,8 @@
-<div>
+<div class=container>
     <h2>Delete Product By PId</h2>
     <input type="text" #pIdRef/>
     <input type="button" value="Delete Product" (click)="deleteProduct(pIdRef.value)"/>
-    <br/>
+    <br/><br/><br/>
+    <input type="button" value="back" (click)="onpress()"> 
     {{msg}}
 </div>
