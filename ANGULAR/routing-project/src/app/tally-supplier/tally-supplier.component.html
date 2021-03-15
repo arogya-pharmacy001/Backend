@@ -1,26 +1,26 @@
-<h1>Supplier Month end Tally</h1>
-<!-- <div>
 
-    <h1>Supplier Month end Tally</h1>
-    <input type="button" value="month end tally" (click)="loadData()">
+<div>
+    <h1 class=header>Supplier Details Based On Delivery Date</h1>
     <div>
-        <table border=1>
+        <table id="bills">
             <tr>
-                <th>Year</th>
-                <th>Month</th>
+                <th>Delivery Date</th>
+                <th>Item name</th>
                 <th>Quantity</th>
-                <th>Amount</th>
+                <th>Type</th>
                 
             </tr>
 
             <tr *ngFor="let supplier of supplierInfo">
-                <td>{{supplier.year}}</td>
-                <td>{{supplier.month}}</td>
+                <td>{{supplier.delivery_date}}</td>
+                <td>{{supplier.item_name}}</td>
                 <td>{{supplier.quantity}}</td>
-                <td>{{supplier.amount}}</td>
+                <td>{{supplier.type}}</td>
                 
 
             </tr>
         </table>
     </div>
-</div> -->
+    <br>
+    <input type="button" value="back" (click)="onpress()">
+</div>

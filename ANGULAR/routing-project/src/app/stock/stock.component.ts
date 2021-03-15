@@ -39,7 +39,7 @@ export class StockComponent implements OnInit {
 
 
   onpress(){
-    this.router.navigate(["adminDashboard"])  
+    this.router.navigate(["login"])  
  
   }
   

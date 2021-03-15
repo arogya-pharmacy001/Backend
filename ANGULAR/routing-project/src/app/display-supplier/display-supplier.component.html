@@ -1,10 +1,10 @@
 <div>
-    <h1>Supplier Details</h1>
-    <input type="button" value="Supplier Stock Details" (click)="loadData()"><br>
+    <h1 class=header>Supplier Details</h1>
+   
     <div *ngIf="flag">
-        <table border=1>
+        <table id="bills">
             <tr>
-                <th>Item_Name</th>
+                <th>Item Name</th>
                 <th>Expiry</th>
                 <th>Quantity</th>
                 <th>Price</th>
@@ -23,5 +23,6 @@
             </tr>
         </table>
     </div>
+    <br>
     <input type="button" value="back" (click)="onclick()">
 </div>

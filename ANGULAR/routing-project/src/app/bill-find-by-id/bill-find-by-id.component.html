@@ -1,17 +1,18 @@
-<!-- <div>
+<div>
     <h2>Find Bill By Id</h2>
-    <label for="">Bill ID</label>
-    <input type="number" [(ngModel)]="bill_id"/>
+    <label for="">cust ID</label>
+    <input type="number" #cidRef/>
+    <input type="button" value="find Product" (click)="callService(cidRef.value)"/>
     {{msg}}
-    <div *ngIf="flag">
+    <div >
         Id is {{billRef.bill_id}}, Name is {{billRef.item_name}}
-    </div>
+    </div> 
     <br>
     <input type="button" value="back" (click)="onpress()">
-</div> -->
+</div>
 
 
-<div>
+<!-- <div>
     <h2>Find Product By PId</h2>
     <input type="number" #pIdRef/>
     <input type="button" value="find Product" (click)="findProduct(pIdRef.value)"/>
@@ -38,4 +39,4 @@
                 </tr>
             </table>
     </div>
-</div>
+</div> --> -->

@@ -1,9 +1,13 @@
-<div>
-    <h2>Delete Bill</h2> <br>
-    <label>Bill Id</label>
-    <input type="text" #bIdRef/> <br>
-    <input type="button" value="Delete Bill" (click)="deleteBill(bIdRef.value)"/>
+<div class=container>
+    <h2 class=header>Delete Bill</h2> <br>
+    
+    <div class=input>
+    <label id="lab">Enter Bill ID</label><br>
+    <input type="text" #bIdRef/> <br> <br>
+    <input type="submit" value="Delete" (click)="deleteBill(bIdRef.value)"/>
     <input type="button" value="back" (click)="onpress()">
+    </div>
     <br/>
-    {{msg}}
+    <br>
+    <h3 id="msg">{{msg}}</h3>
 </div>

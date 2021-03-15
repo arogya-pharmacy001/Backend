@@ -10,11 +10,13 @@ import { BillService } from '../bill.service';
 })
 export class BillFindByIdComponent implements OnInit {
 
+  
   billInfo:Array<Bill>=[]
   billRef = new Bill();
-  bill_id : number=0;
+  cust_id : number=0;
   msg:string=""
   flag:boolean=false;
+  a:any=""
   constructor(public billService : BillService,public router:Router) { }
 
   ngOnInit(): void {
@@ -31,25 +33,26 @@ export class BillFindByIdComponent implements OnInit {
     // })
   }
 
-  // callService() {
-  //   //console.log("Event fired "+this.pid)
-  //   this.billService.findBillById(this.bill_id).subscribe(data=> {
-  //     if(data==null){
-  //     this.msg = "Record not found";
-  //     this.flag = false;
+  callService(cust_id:any) {
+    // console.log("Event fired "+this.pid)
+    this.billService.findBillInfo(this.cust_id).subscribe(data=> {
+      if(data==null){
+      this.msg = "Record not found";
+      // this.flag = false;
     
-  //     }else {
-  //       this.msg = "";
-  //       this.flag = true;
-  //       this.billRef=data;        
-  //     }
-  //   })
-  // }
-
-  findProduct(bid:any){
-    console.log(bid);
-    this.billService.findBillInfo(bid).subscribe(result=>this.msg=result);
+      }else {
+        this.msg = "";
+        // this.flag = true;
+        this.billRef=data;        
+      }
+    })
+    this.billService.findBillbyCustId(cust_id).subscribe(result=>this.msg=result);
   }
+
+  // findProduct(bid:any){
+  //   console.log(bid);
+  //   this.billService.findBillInfo(bid).subscribe(result=>this.msg=result);
+  // }
 
   onpress(){
     this.router.navigate(["adminDashboard"])

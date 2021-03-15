@@ -70,7 +70,7 @@ const routes: Routes = [
 {path:"\storebills",component:StoreBillComponent},
 {path:"\alterbills",component:UpdateBillComponent},
 {path:"\deletebills",component:DeleteBillComponent},
-
+{path:"\billid",component:BillFindByIdComponent},
 
 {path:"\supplierdisplay",component:DisplaySupplierComponent},
 {path:"\supplierinsert",component:AddSupplierComponent},

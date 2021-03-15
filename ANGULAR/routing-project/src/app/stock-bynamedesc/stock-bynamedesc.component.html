@@ -1,14 +1,7 @@
 <div>
-    <h2 class=header>View StockTable By Name  Decending</h2>
-  <!--  <label>Name</label>
-    <input type="text" [(ngModel)]="sid1" ><br/>
-   
-    -->
-    <input type="button" value="VIEW" (click)="stockByName()"><br/><br/><br/>
-
-
-    <div>
-        <!--<table border=1> -->
+    <h2 class=header>Stock Sorted By Name In Descending Order</h2>
+    <div *ngIf="flag">
+        
             <table id="bills">
                 <tr>
                     <td>STOCK ID</td>

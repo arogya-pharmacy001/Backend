@@ -10,21 +10,18 @@ import { Stock } from '../stock.model';
 })
 export class StockBynamedescComponent implements OnInit {
 
-
+  flag:boolean=false;
   stocks:Array<Stock>=[];
 
 
   constructor(public stockSer:StockServiceService,public router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit():any{
+    this.flag=true
+    return this.stockSer.loadstocknamedesc().subscribe(data=>this.stocks=data);
   }
 
 
-  stockByName()
-  {
-    
-    return this.stockSer.loadstockname().subscribe(data=>this.stocks=data);
-  }
   onpress(){
     this.router.navigate(["adminDashboard"])  
  

@@ -15,12 +15,11 @@ export class DisplaySupplierComponent implements OnInit {
   constructor(public supplierService:SupplierService, public router:Router) { }
 
   ngOnInit(): void {
-  }
-
-  loadData():any{
     this.flag=true;
     this.supplierService.loadSupplierDetails().subscribe(data=>this.supplierInfo=data);
   }
+
+ 
 
   onclick(){
      this.router.navigate(["adminDashboard"])
