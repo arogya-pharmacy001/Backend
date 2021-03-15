@@ -1,8 +1,8 @@
 <div>
-    <input type="button" value="Customer Details" (click)="loadData()"/>
+   <h1 class=header>Customer Details</h1>
     <div *ngIf="flag">
    
-        <table border="1">
+        <table id="bills">
         <tr>
             <th>Customer ID</th>
             <th>Customer Name</th>
@@ -17,6 +17,8 @@
                 
         </tr>
     </table>
-    
+    <br>
+    <br>
+    <input type="button" value="back" (click)="onpress()">
 </div>
 </div>

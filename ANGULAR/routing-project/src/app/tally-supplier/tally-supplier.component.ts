@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Supplier } from '../supplier.model';
 import { SupplierService } from '../supplier.service';
 
@@ -10,15 +11,16 @@ import { SupplierService } from '../supplier.service';
 export class TallySupplierComponent implements OnInit {
 
   
-  supplierInfo:Array<Supplier>=[];
-  constructor(public supplierService:SupplierService) { }
+  supplierInfo:Array<Supplier>=[]
+  constructor(public supplierService:SupplierService,public router:Router) { }
 
   ngOnInit(): void {
+    this.supplierService.loadSupplierTallyDetails().subscribe(data=>this.supplierInfo=data);
   }
 
-  // loadData(){
-    
-  //   this.supplierService.loadSupplierTallyDetails().subscribe(data=>this.supplierInfo=data);
-  // }
+  onpress(){
+
+    this.router.navigate(["adminDashboard"])
+  }
 
 }

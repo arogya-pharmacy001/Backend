@@ -1,4 +1,10 @@
-
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #939494;
+  color: white;
+  font-size: 50px;
+}
 
 input, select, textarea {
     width: 50%;
@@ -38,8 +44,23 @@ input, select, textarea {
     padding-left: 30px;
     padding-right: 30px;
     width: auto;
-    margin-left: 335px;
+    margin-left: 200px;
   }
+
+  #lab{
+    font-size: large;
+}
+#msg{
+  padding-left: 380px;
+  color: rgb(83, 55, 55);
+  font-size: medium;
+}
+
+.input{
+   
+  padding-left:300px;
+  margin: auto;
+}
   
   
   

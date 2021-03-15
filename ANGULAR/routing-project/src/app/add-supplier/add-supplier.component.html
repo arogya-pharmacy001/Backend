@@ -1,5 +1,5 @@
-<div class=container>
-    <h2>Store Supplier Stock Details</h2>
+ <h2 class=header>Store Supplier Stock Details</h2>
+  <div class=container>
     <form [formGroup]="supplierInfo" (ngSubmit)="storeSupplierDetails()">
         <label>Item Name</label><br>
         <input type="text" formControlName="item_name"/><br/>
@@ -14,8 +14,8 @@
         <label>Delivery Date</label><br>
         <input type="date" formControlName="delivery_date"/><br/>
         <br>
-        <input type="submit" value="Add Details"/>
-        
+        <input type="submit" value="Store Supplier"/>
+        <input type="button" value="back" (click)="onpress()">
     </form>
     {{msg}}
 </div>

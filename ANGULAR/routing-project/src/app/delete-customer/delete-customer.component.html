@@ -1,7 +1,14 @@
-<div>
-    <h2>Delete Customer By ID</h2>
-    <input type="text" #pIdRef/>
-    <input type="button" value="Delete Customer" (click)="deleteCustomer(pIdRef.value)"/>
+<div class=container>
+    <h2 class=header>Delete Customer By ID</h2>
+    <div class=input>
+    <label id="lab">Enter Customer ID</label><br>
+    <input type="text" #pIdRef/> <br>
+    <br>
+    <input type="submit" value="Delete" (click)="deleteCustomer(pIdRef.value)"/>
+    <input type="button" value="back" (click)="onpress()">
+    </div>
     <br/>
-    {{msg}}
+    <br>
+    <br/>
+    <h3 id="msg">{{msg}}</h3>
 </div>

@@ -18,7 +18,7 @@ export class SupplierService {
     return this.httpClient.post("http://localhost:9191/supplier/add",supplierRef,{responseType:'text'})
    }
 
-  //  loadSupplierTallyDetails(supplierInfo:any):Observable<Supplier[]>{
-  //    return this.httpClient.get<Supplier[]>("http://localhost:9191/supplier/tally")
-  //  }
+   loadSupplierTallyDetails():Observable<Supplier[]>{
+     return this.httpClient.get<Supplier[]>("http://localhost:9191/supplier/tally")
+   }
 }
