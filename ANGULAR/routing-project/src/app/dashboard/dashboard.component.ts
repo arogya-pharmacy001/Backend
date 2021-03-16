@@ -32,6 +32,10 @@ customer=new Customer;
       this.router.navigate(["cart"]);
     }
 
+    onpressorders(){
+      this.router.navigate(["\orderdisplay"])
+    }
+
 
   
 

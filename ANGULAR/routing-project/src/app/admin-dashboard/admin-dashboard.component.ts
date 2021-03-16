@@ -42,7 +42,7 @@ onPressFind(){
 }
 
 onPressStockDisplay(){
-  this.router.navigate(["stockdisplay"])
+  this.router.navigate(["stockadmindisplay"])
 }
 onPressStockStore(){
   this.router.navigate(["stockinsert"])

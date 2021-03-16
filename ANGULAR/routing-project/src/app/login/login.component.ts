@@ -17,6 +17,10 @@ export class LoginComponent implements OnInit {
   customer1=new Customer();
   constructor(public router:Router,public reg_service:RegistrationService){ }
   
+onclickregister(){
+  this.router.navigate(['register'])
+}
+
   ngOnInit() :void {
    
   }
@@ -60,35 +64,11 @@ export class LoginComponent implements OnInit {
                 this.customer1=obj;
                 sessionStorage.setItem("customer",JSON.stringify(obj));
                 this.router.navigate(["adminDashboard"]);
-            }
+              }
           }
         })
-    
-      
-    }
-   
+      }
+}
+
   
-
-  }
-
-
-  //dummy login mechanism
-  /*
-  checkuser(name:any)
-  {
-
-    let user=name.username;
-    let pass=name.password;
-    if(user=="raj"&&pass=="pass")
-    {
-
-      this.router.navigate(["home"])
-    console.log("sucessfullly login");
-    }
-    else{
-      console.log("failed login")
-      this.msg="user name wrong";
-    }
-  }
-*/
 

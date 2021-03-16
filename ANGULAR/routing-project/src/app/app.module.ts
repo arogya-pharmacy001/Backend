@@ -48,6 +48,7 @@ import { CustomerCartComponent } from './customer-cart/customer-cart.component';
 import { CustomerSortbyaddressComponent } from './customer-sortbyaddress/customer-sortbyaddress.component';
 import { CustomerSortbyidComponent } from './customer-sortbyid/customer-sortbyid.component';
 import { CustomerSortbynameComponent } from './customer-sortbyname/customer-sortbyname.component';
+import { DisplayadminstockComponent } from './displayadminstock/displayadminstock.component';
 
 
 
@@ -120,6 +121,8 @@ import { CustomerSortbynameComponent } from './customer-sortbyname/customer-sort
     CustomerSortbyidComponent,
 
     CustomerSortbynameComponent,
+
+    DisplayadminstockComponent,
   
 
 

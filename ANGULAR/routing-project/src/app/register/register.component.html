@@ -1,19 +1,68 @@
-<h1>register</h1>
+<!-- <h1>register</h1>
 <div>
     <h2>Login Customer Page</h2>
     <form #userRef="ngForm" (ngSubmit)="addCustomerComponent(userRef.value)">
         <label>Name</label>
-        <input type="text" name="cust_name" ngModel /><br>
-        <label>Addres</label>
-        <input type="text" name="cust_addr" ngModel /><br>
+        <input type="text" name="cust_name"  ngModel  /><br>
+        <label>Address</label>
+        <input type="text" name="cust_addr" ngModel  /><br>
         <label>Phone Number</label>
         <input type="number" name="cust_phone" ngModel /><br>
         <label>User Name</label>
         <input type="text" name="cust_login" ngModel /><br>
         <label>Passsword</label>
         <input type="password" name="pass" ngModel /><br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Register">
         <input type="reset" value="Reset">
     </form>
     {{msg}}
-</div>
+</div> -->
+
+
+<main class="d-flex align-items-center min-vh-100" style="background-color: #a7a7a7;">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-5" style="background-color: black;">
+            <img src="https://www.bootstrapdash.com/demo/login-template-free-2/assets/images/login.jpg" alt="logo" class="login-card-img">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <div class="brand-wrapper">
+              <!-- <img src="https://www.bootstrapdash.com/demo/login-template-free-2/assets/images/logo.svg" alt="logo" class="logo">  -->
+              <h2>Arogya Pharmacy</h2>
+              </div>
+              <p class="login-card-description">Register with Us.</p>
+              <form #userRef="ngForm" (ngSubmit)="addCustomerComponent(userRef.value)">
+                  <div class="form-group mb-4">
+                    <label for="Name" class="sr-only">Name</label>
+                    <input type="text" name="cust_name" class="form-control" placeholder="Name" ngModel  />
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="Address" class="sr-only">Address</label>
+                    <input type="text" name="cust_addr" class="form-control" placeholder="Address"  ngModel />
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="Phone" class="sr-only">Phone Number</label>
+                    <input type="number" name="cust_phone" class="form-control" placeholder="Phone Number" ngModel/>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="Username" class="sr-only">Username</label>
+                    <input type="text" name="cust_login" class="form-control"  placeholder="Username"  ngModel/>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="Password" class="sr-only">Password</label>
+                    <input type="password" name="pass" class="form-control" placeholder="Password" ngModel/>
+                  </div>
+                  <div class="form-group py-3">
+                  <input name="login" id="login" class="btn btn-block btn-info login-btn mb-4" type="submit" value="Register">
+                  </div>
+                </form>
+             {{msg}}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
