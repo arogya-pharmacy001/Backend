@@ -39,12 +39,12 @@ public class customerService {
 		Optional<Customer> ct=customerRepository.findById(cust.getCust_id());
 		if(ct.isPresent())
 		{
-			return "RECORD ALREADY PRESENT";
+			return "Username Exists";
 		}
 		else
 		{
 			customerRepository.save(cust);
-			return "RECORD SAVED";
+			return "Registration Successful";
 		}
 	}
 	
@@ -60,11 +60,11 @@ public class customerService {
 		if(ct.isPresent())
 		{
 			customerRepository.saveAndFlush(cust);
-			return "UPDATED RECORD "+cust.getCust_id();
+			return "Customer Details Changed Successfully "+cust.getCust_id();
 		}
 		else
 		{
-			return "RECORD NOT FOUND";
+			return "Customer Not Found";
 		}
 	}
 	public String deleteCustomer(int id)
@@ -72,7 +72,7 @@ public class customerService {
 		if(customerRepository.existsById(id))
 		{
 			customerRepository.deleteById(id);
-			return "customer DELETED";
+			return "Customer Deleted";
 		}
 		else
 		{

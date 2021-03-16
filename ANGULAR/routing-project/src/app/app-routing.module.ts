@@ -15,6 +15,7 @@ import { DeleteCustomerComponent } from './delete-customer/delete-customer.compo
 import { DisplayBillComponent } from './display-bill/display-bill.component';
 import { DisplayCustomerComponent } from './display-customer/display-customer.component';
 import { DisplaySupplierComponent } from './display-supplier/display-supplier.component';
+import { DisplayadminstockComponent } from './displayadminstock/displayadminstock.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { OrderByDateSortComponent } from './order-by-date-sort/order-by-date-sort.component';
@@ -51,6 +52,7 @@ const routes: Routes = [
 {path:"test",component:TestComponettComponent},
 {path:"\supplier",component:DisplaySupplierComponent},
 
+{path:"\stockadmindisplay",component:DisplayadminstockComponent},
 {path:"\stockdisplay",component:StockComponent},
 {path:"\stockbyname",component:StockBynameComponent},
 {path:"\stockbynamedesc",component:StockBynamedescComponent},
