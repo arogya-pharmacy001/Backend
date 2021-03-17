@@ -28,4 +28,8 @@ msg:string="";
     this.router.navigate(["login"])
   }
 
+  onClickHome(){
+    this.router.navigate([""]);
+  }
+
 }

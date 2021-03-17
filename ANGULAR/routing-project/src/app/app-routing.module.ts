@@ -3,6 +3,7 @@ import { TestComponentRenderer } from '@angular/core/testing';
 import { RouterModule, Routes } from '@angular/router';
 import { AddSupplierComponent } from './add-supplier/add-supplier.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AfterProceedToPayComponent } from './after-proceed-to-pay/after-proceed-to-pay.component';
 import { BillFindByIdComponent } from './bill-find-by-id/bill-find-by-id.component';
 import { ContatusComponent } from './contatus/contatus.component';
 import { CustomerCartComponent } from './customer-cart/customer-cart.component';
@@ -85,7 +86,8 @@ const routes: Routes = [
 {path:"\customerbyname",component:CustomerSortbynameComponent},
 {path:"\customerbyaddress",component:CustomerSortbyaddressComponent},
 
-{path:"\cart",component:CustomerCartComponent}
+{path:"\cart",component:CustomerCartComponent},
+{path:"\customerbill",component:AfterProceedToPayComponent}
 
 
 

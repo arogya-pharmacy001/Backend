@@ -21,6 +21,10 @@ onclickregister(){
   this.router.navigate(['register'])
 }
 
+onClickHome(){
+  this.router.navigate([""])
+}
+
   ngOnInit() :void {
    
   }

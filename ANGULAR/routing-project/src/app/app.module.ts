@@ -49,6 +49,7 @@ import { CustomerSortbyaddressComponent } from './customer-sortbyaddress/custome
 import { CustomerSortbyidComponent } from './customer-sortbyid/customer-sortbyid.component';
 import { CustomerSortbynameComponent } from './customer-sortbyname/customer-sortbyname.component';
 import { DisplayadminstockComponent } from './displayadminstock/displayadminstock.component';
+import { AfterProceedToPayComponent } from './after-proceed-to-pay/after-proceed-to-pay.component';
 
 
 
@@ -123,6 +124,8 @@ import { DisplayadminstockComponent } from './displayadminstock/displayadminstoc
     CustomerSortbynameComponent,
 
     DisplayadminstockComponent,
+
+    AfterProceedToPayComponent,
   
 
 

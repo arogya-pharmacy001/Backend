@@ -37,8 +37,14 @@
     </p>
   </form> -->
 
+  <nav class="navbar navbar-dark bg-dark" style="background:rgb(13 8 8 / 52%) !important;">
+    <div class="container-fluid">
+      <a class="navbar-brand title" routerLink="customer" (click)="onClickHome()">Arogya Pharmacy</a>
+      
+    </div>
+  </nav>
 
-  <main class="d-flex align-items-center min-vh-100" style="background-color: #a7a7a7;">
+  <main class="d-flex align-items-center min-vh-100" style="background-color: #eeeeee;">
     <div class="container">
       <div class="card login-card">
         <div class="row no-gutters">
@@ -55,7 +61,8 @@
               <form #loginRef="ngForm" (ngSubmit)="loginUser(loginRef.value)">
                   <div class="form-group">
                     <label for="username" class="sr-only">Username</label>
-                    <input type="text"  name="cust_login" class="form-control" placeholder="Username" ngModel >
+                    <input type="text"  name="cust_login" class="form-control" placeholder="Username" ngModel required >
+                    
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
@@ -85,3 +92,12 @@
      
     </div>
   </main>
+
+  <footer class="text-center text-lg-start">
+    <!-- Copyright -->
+ <div class="text-center p-3">
+   © 2021 Copyright
+   <a class="text-dark" href="#">Arogya Pharmacy</a>
+ </div>
+ <!-- Copyright -->
+ </footer>
