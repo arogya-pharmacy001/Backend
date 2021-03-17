@@ -46,9 +46,6 @@ export class StockComponent implements OnInit {
   
   add(cart_id:any,cust:any)
   {
-
-    // console.log(cart_id);
-    // console.log(cust);
     this.cartData.bid=cart_id;
     this.cartData.cid=cust;
     return this.billserv.addToCart(this.cartData).subscribe(data=>this.cartData);

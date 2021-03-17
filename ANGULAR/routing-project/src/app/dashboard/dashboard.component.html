@@ -1,7 +1,7 @@
 <div>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
-        <a class="navbar-brand text-white text-bold" href="#">Welcome {{customer.cust_name}}</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white" style="background:rgb(13 8 8 / 52%) !important;">
+      <a class="navbar-brand title">Arogya Pharmacy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,20 +9,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
            
-            <li class="nav-item mx-3">
+            <li class="nav-item mx-2">
               <a class="nav-link" routerLink="cart"  class="text-white" (click)="tocart()">Cart</a>
             </li>
-            <li class="nav-item mx-3">
-              <a class="nav-link" routerLink="viewstatus"  class="text-white"  (click)="onpressorders()">Your Orders</a>
+            <!-- <li class="nav-item mx-2">
+              <a class="nav-link" router-link="Orders" class="text-white" (click)=" onpressorders()" >Your Orders</a>
+            </li> -->
+              <li class="nav-item mx-2">
+                <div class="dropdown">
+                  <button class="dropbtn"><img src="../assets/profile-user.png"/>{{customer.cust_name}}</button>
+                  <div class="dropdown-content">
+                    <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="logout()">Logout</a>
+
+                
+                  </div>
+                </div>
               </li>
-          </ul>
-          <input type="button" class="btn btn text-bold btn-danger text-white" value="Logout" (click)="logout()" />
-    
+          </ul>    
          
         </div>
       </nav>
 
-      <div name="body" id="body" style="background:linear-gradient(to right, #b0b2b4, #7f8081)">
+      <div name="body" id="body" style="background-color: #eeeeee;">
 
         
         
@@ -37,4 +45,13 @@
     
     <router-outlet></router-outlet>
     </div>
+
+    <footer class="text-center text-lg-start">
+      <!-- Copyright -->
+   <div class="text-center p-3">
+     © 2021 Copyright
+     <a class="text-dark" href="#">Arogya Pharmacy</a>
+   </div>
+   <!-- Copyright -->
+   </footer>
     

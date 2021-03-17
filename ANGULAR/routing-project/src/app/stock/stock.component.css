@@ -57,7 +57,7 @@
 }
 
 .bg-cart {
-    background-color: orange;
+    background-color: #6e6e6e;
     color: #fff
 }
 
@@ -138,4 +138,7 @@ input[type=button] {
   width: auto;
   margin-left: 565px;
   border-radius: 6px;
+}
+.modal {
+    display: none;
 }
