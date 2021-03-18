@@ -1,18 +1,11 @@
 .header {
   padding: 20px;
   text-align: center;
-  background: #939494;
-  color: white;
+  color: #000;
   font-size: 50px;
 }
 
-input, select, textarea {
-    width: 50%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
+
 
   label {
     padding: 12px 12px 12px 0;
@@ -25,9 +18,7 @@ input, select, textarea {
 
   .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 20px;
-    padding-left: 100px;
   }
 
   input[type=submit]:hover {
@@ -44,21 +35,19 @@ input, select, textarea {
     padding-left: 30px;
     padding-right: 30px;
     width: auto;
-    margin-left: 200px;
   }
 
   #lab{
     font-size: large;
 }
 #msg{
-  padding-left: 380px;
+  /*padding-left: 380px; */
   color: rgb(83, 55, 55);
   font-size: medium;
 }
 
 .input{
-   
-  padding-left:300px;
+
   margin: auto;
 }
   

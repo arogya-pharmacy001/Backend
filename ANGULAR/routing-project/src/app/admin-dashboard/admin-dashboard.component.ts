@@ -107,4 +107,8 @@ onPressCustomerName(){
 onPressCustomerAddress(){
   this.router.navigate(["customerbyaddress"])
 }
+
+onClickHome(){
+  this.router.navigate(["adminDashboard"]);
+}
 }

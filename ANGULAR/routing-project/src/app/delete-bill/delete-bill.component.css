@@ -1,8 +1,7 @@
 .header {
     padding: 20px;
     text-align: center;
-    background: #939494;
-    color: white;
+    color:#000;
     font-size: 50px;
   }
   input[type=button]:hover {
@@ -25,8 +24,7 @@
   }
 
 .input{
-   
-    padding-left: 450px;
+  
     margin: auto;
 }
 
@@ -34,7 +32,6 @@
     font-size: large;
 }
 #msg{
-  padding-left: 380px;
   color: rgb(83, 55, 55);
   font-size: medium;
 }

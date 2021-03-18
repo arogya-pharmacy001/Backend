@@ -41,7 +41,10 @@ input, select, textarea {
   .header {
     padding: 20px;
     text-align: center;
-    background: #939494;
-    color: white;
+    color: #000;
     font-size: 50px;
+  }
+
+  form{
+    text-align: center;
   }

@@ -49,3 +49,8 @@
   footer a, footer div{
     color: #fff !important;
   }
+
+  .img-responsive
+  {
+    height: 220px;
+  }

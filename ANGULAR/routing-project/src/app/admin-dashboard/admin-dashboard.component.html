@@ -1,7 +1,7 @@
 <div>
    
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
-        <a class="navbar-brand text-white text-bold" href="#">Welcome ADMIN</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white" style="background:rgb(13 8 8 / 52%) !important;">
+    <a class="navbar-brand title" routerLink="customer" (click)="onClickHome()">Arogya Pharmacy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -78,45 +78,38 @@
               </div>
             </li>
 
+            <li class="nav-item mx-2">
+              <div class="dropdown">
+                <button class="dropbtn"><img src="../assets/profile-user.png"/>Admin</button>
+                <div class="dropdown-content admin-logout">
+                  <a class="dropdown-content text-white" routerLink="Customer"  (click)="logout()">Logout</a>
+
+              
+                </div>
+              </div>
+            </li>
+
            
             
           </ul>
-          <input type="button" class="btn btn text-bold btn-danger text-white" value="Logout" (click)="logout()" /> 
         </div>
     </nav>
 
-
-<!--
-
-<hr/>
-<h2>Routing Links </h2>
-  <a routerLink="stockdisplay">STOCK DISPLAY</a><br/>
-  <a routerLink="stockbyname">STOCK DISPLAY ASCENDING</a><br/>
-  <a routerLink="stockbynamedesc">STOCK DISPLAY DESCENDING</a><br/> 
-  <a routerLink="stockdelete">STOCK DELETE</a><br/>
-  <a routerLink="stockinsert">STOCK INSERT</a><br/>
-  <a routerLink="stockupdate">STOCK UPDATE</a><br/>
-
-  <a routerLink="orderupdate">ORDER UPDATE</a><br/>
-  <a routerLink="orderinsert">ORDER INSERT</a><br/>
-  <a routerLink="orderdisplay">ORDER DISPLAY</a><br/>
-  <a routerLink="orderdelete">ORDER DELETE</a><br/>
-  <a routerLink="orderdisplayquan">ORDER DISPLAY DESCENDING</a><br/>
-  <a routerLink="orderdatesort">ORDER DISPLAY DATE WISE</a><br/>
-  <a routerLink="orderyearmonthdisplay">SPECIFIC ORDER DISPLAY</a><br/>
-  <hr/>
-
-   -->
-
-
-
-
-
-<!--
-    <hr>
-
-    <router-outlet></router-outlet>
--->
 <router-outlet></router-outlet>
-  </div>
+
+<header class="text-center text-black py-5">
+  <h1 class="display-5 font-weight-bold mb-4">Welcome to Arogya Pharmacy Admin Panel</h1>
+  <p class="lead mb-0">Buy Medicines at Arogya Pharmacy. 100% Authentic Medicines. Wide Range of Medicines.</p>
+ 
+</header>
+
+</div>
+<footer class="text-center text-lg-start">
+  <!-- Copyright -->
+<div class="text-center p-3">
+ © 2021 Copyright
+ <a class="text-dark" href="#">Arogya Pharmacy</a>
+</div>
+<!-- Copyright -->
+</footer>
     

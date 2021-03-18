@@ -1,3 +1,4 @@
+<app-admin-dashboard></app-admin-dashboard>
 <div class=container>
     <h2 class=header>Store Products</h2>
     <form [formGroup]="productInfo" (ngSubmit)="storeProductDetails()">
@@ -13,8 +14,12 @@
         <input type="number" formControlName="price"/><br/>
         <label>Type</label><br>
         <input type="text" formControlName="type"/><br/><br>
-        <input type="submit" value="store product"/>
-        <input type="button" value="back" (click)="onpress()">
+
+        <div class="text-center py-4">
+            <button type="submit" value="store product" class="btn btn-danger mr-2">Store Product</button>
+            <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+        </div>
+
     </form>
     {{msg}}
 </div>
