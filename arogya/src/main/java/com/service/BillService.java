@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bean.Bill;
+import com.bean.Cartnation;
 import com.bean.cart;
 import com.dao.BillDao;
 import com.dao.BillRepository;
@@ -81,7 +82,13 @@ public class BillService {
 		
 	}
 	
-	public List<Bill> findBycustIdservice(int cust_id) {
+	/*public List<Bill> findBycustIdservice(int cust_id) {
+		return bd.findBycust_id(cust_id);
+		
+	}
+	*/
+	
+	public List<Cartnation> findBycustIdservice(int cust_id) {
 		return bd.findBycust_id(cust_id);
 		
 	}

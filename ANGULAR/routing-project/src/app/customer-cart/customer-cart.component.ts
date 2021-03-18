@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Bill } from '../bill.model';
 import { BillService } from '../bill.service';
+import { cartNation } from '../cartnation.model';
 import { Customer } from '../customer.module';
 
 @Component({
@@ -11,8 +12,15 @@ import { Customer } from '../customer.module';
 })
 export class CustomerCartComponent implements OnInit {
 customer =new Customer;
+
+//billinfo:Array<Bill>=[];
+billinfo:Array<cartNation>=[];
+
+  constructor(public billService : BillService,public router:Router) { }
+
 billinfo:Array<Bill>=[];
 constructor(public billService : BillService,public router:Router) { }
+
 
   ngOnInit(): void {
 
