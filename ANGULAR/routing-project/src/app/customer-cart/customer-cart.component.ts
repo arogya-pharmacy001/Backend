@@ -12,10 +12,15 @@ import { Customer } from '../customer.module';
 })
 export class CustomerCartComponent implements OnInit {
 customer =new Customer;
+
 //billinfo:Array<Bill>=[];
 billinfo:Array<cartNation>=[];
 
   constructor(public billService : BillService,public router:Router) { }
+
+billinfo:Array<Bill>=[];
+constructor(public billService : BillService,public router:Router) { }
+
 
   ngOnInit(): void {
 
@@ -23,18 +28,16 @@ billinfo:Array<cartNation>=[];
     if(customer1!=null)
     {
       this.customer=JSON.parse(customer1);
-
-
     }
-
     this.billService.findBillbyCustId(this.customer.cust_id).subscribe(data=>this.billinfo=data);
-
-
-
-
   }
 
 
-  
+  onPressProceed(){
+    this.router.navigate(["customerbill"]);
+  }
 
+  onClickHome(){
+    this.router.navigate(["dashboard"]);
+  }
 }
