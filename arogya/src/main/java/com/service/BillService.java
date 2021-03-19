@@ -88,7 +88,7 @@ public class BillService {
 	}
 	*/
 	
-	public List<Cartnation> findBycustIdservice(int cust_id) {
+	public List<Bill> findBycustIdservice(int cust_id) {
 		return bd.findBycust_id(cust_id);
 		
 	}
