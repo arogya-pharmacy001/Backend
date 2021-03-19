@@ -37,7 +37,7 @@ public class BillDao {
 		}
 		else
 		{
-			/*
+			
 			int custid=c_id;
 			String itemname=s.getItem_name();
 			System.out.println(itemname);
@@ -55,8 +55,8 @@ public class BillDao {
 			
 			emf.getTransaction().commit();
 			emf.close();
-			*/
 			
+			/*
 			int custid=c_id;
 			String itemname=s.getItem_name();
 			float i=s.getPrice();
@@ -77,6 +77,9 @@ public class BillDao {
 			
 			emf.getTransaction().commit();
 			emf.close();
+			*/
+			
+			
 			
 			/*
 	
@@ -105,10 +108,10 @@ public class BillDao {
 	
 	}
 	
-	public List<Cartnation> findBycust_id(int id)
+	public List<Bill> findBycust_id(int id)
 	{
 		
-		/*
+		
 		List<Bill> listofBill=new ArrayList<Bill>();
 		
 		
@@ -117,8 +120,8 @@ public class BillDao {
 	
 		System.out.println(listofBill);
 		return listofBill;
-		*/
 		
+		/*
 		List<Cartnation> listofBill = new ArrayList<Cartnation>();
 		
 		EntityManager emf=fact.createEntityManager();
@@ -127,7 +130,7 @@ public class BillDao {
 		listofBill=emf.createQuery("select c from Cartnation c where c.item_no=?1",Cartnation.class).setParameter(1, id).getResultList();
 		
 		return listofBill;
-		
+		*/
 		
 		/*
 		
