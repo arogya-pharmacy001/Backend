@@ -19,7 +19,6 @@ billinfo:Array<Bill>=[];
 msg:string="";
 constructor(public billService : BillService,public router:Router) { }
 
-
   ngOnInit(): void {
 
     let customer1=sessionStorage.getItem("customer");
