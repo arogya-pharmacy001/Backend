@@ -53,11 +53,11 @@
                 <div *ngFor="let bill of billinfo">
                 <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
                   <div class="mr-1"><img class="rounded" src="../../assets/medicine.jpg" width="70"></div>
-                   <!--   <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_name}}</span>-->
-                        <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_no}}</span>
+                     <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_name}}</span>
+                    <!--    <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_no}}</span>-->
                         <div class="d-flex flex-row product-desc">
                             
-                            <div class="size mr-1"><span class="text-grey">Price:</span><span class="font-weight-bold">&nbsp;{{bill.price}}</span></div>
+                            <div class="size mr-1"><span class="text-grey">Price:</span><span class="font-weight-bold">&nbsp;{{bill.amount}}</span></div>
                             <div class="color"><span class="text-grey">quantity:</span><span class="font-weight-bold">&nbsp;{{bill.quantity}}</span></div>
                         </div>
                     </div>

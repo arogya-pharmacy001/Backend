@@ -13,15 +13,15 @@ import { Customer } from '../customer.module';
 export class CustomerCartComponent implements OnInit {
 customer =new Customer;
 
-//billinfo:Array<Bill>=[];
-billinfo:Array<cartNation>=[];
+billinfo:Array<Bill>=[];
+//billinfo:Array<cartNation>=[];
 
   constructor(public billService : BillService,public router:Router) { }
-
+/*
 billinfo:Array<Bill>=[];
 msg:string="";
 constructor(public billService : BillService,public router:Router) { }
-
+*/
 
   ngOnInit(): void {
 
