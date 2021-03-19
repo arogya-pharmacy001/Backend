@@ -20,4 +20,10 @@ export class AfterProceedToPayComponent implements OnInit {
   OnClickCart(){
      this.router.navigate(["cart"]);
   }
+
+  logout()
+  {
+    sessionStorage.removeItem("customer");
+    this.router.navigate(["login"]);
+  }
 }

@@ -19,6 +19,7 @@ billinfo:Array<cartNation>=[];
   constructor(public billService : BillService,public router:Router) { }
 
 billinfo:Array<Bill>=[];
+msg:string="";
 constructor(public billService : BillService,public router:Router) { }
 
 
@@ -39,5 +40,18 @@ constructor(public billService : BillService,public router:Router) { }
 
   onClickHome(){
     this.router.navigate(["dashboard"]);
+  }
+
+  logout()
+  {
+    sessionStorage.removeItem("customer");
+    this.router.navigate(["login"]);
+  }
+
+  onPressDelete(bill_id:any){
+    console.log(bill_id);
+   
+    this.billService.deleteBillInfo(bill_id).subscribe(result=>this.msg=result);
+    window.location.reload();
   }
 }

@@ -1,13 +1,22 @@
-*{
-text-decoration-color: honeydew;
-color: white;
+html {background : #eeeeee !important;}
+body {background : #eeeeee !important;}
+
+.title
+{
+  color: #fff !important;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
+.title:hover
+{
+  color: #fff !important;
+}
 /* Dropdown Button */
 .dropbtn {
-    background-color: #878a87;
+    background-color:transparent;
     color: white;
-    padding: 16px;
     font-size: 16px;
     border: none;
   }
@@ -22,29 +31,69 @@ color: white;
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f103;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #fefefe;
+    min-width: 130px;
     z-index: 1;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color:black;
-    padding: 12px 16px;
+    color:black  !important;
+    padding: 8px 16px 10px;
     text-decoration: none;
     display: block;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  .dropdown-content a:hover
+  {
+    color:rgb(83, 83, 83)  !important;
+  }
+
+  .admin-logout 
+  {
+    min-width: 80px !important;
+  }
+
+  .admin-logout a
+  {
+    background-color: rgb(218, 15, 15)  !important;
+    color:#fff !important;
+    min-width: 80px !important;
+
+  }
+
+  nav a:hover
+  {
+    text-decoration:none;
   }
   
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: rgb(24, 22, 22);}
+  .dropdown img{
+    padding-right: 5px;;
+  }
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #657a66;}
 
   .inside-dropdown{
       flood-color: black;
   }
+
+
+  footer 
+{
+  background-color: rgb(27 26 26 / 34%);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  margin-bottom: 0px;
+}
+
+footer a, footer div{
+  color: #fff !important;
+}

@@ -1,12 +1,16 @@
-<div class=container>
+<app-admin-dashboard></app-admin-dashboard>
+<div class="container text-center">
     <h2 class=header>Delete Customer By ID</h2>
     <div class=input>
     <label id="lab">Enter Customer ID</label><br>
     <input type="text" #pIdRef/> <br>
-    <br>
-    <input type="submit" value="Delete" (click)="deleteCustomer(pIdRef.value)"/>
-    <input type="button" value="back" (click)="onpress()">
+    
+    <div class="text-center py-4">
+        <button  class="btn btn-danger mr-2" value="Delete" (click)="deleteCustomer(pIdRef.value)">Delete</button>
+        <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
     </div>
+
+     </div>
     <br/>
     <br>
     <br/>

@@ -1,5 +1,7 @@
-<div>
-   <h1 class=header>Customer Details</h1>
+
+<app-admin-dashboard></app-admin-dashboard>
+<div class="container">
+   <h1 class="header text-black">Customer Details</h1>
     <div *ngIf="flag">
    
         <table id="bills">
@@ -17,8 +19,11 @@
                 
         </tr>
     </table>
-    <br>
-    <br>
-    <input type="button" value="back" (click)="onpress()">
+
 </div>
+
+<div class="text-center py-4">
+    <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+</div>
+
 </div>

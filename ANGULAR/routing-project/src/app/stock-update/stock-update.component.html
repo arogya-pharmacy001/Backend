@@ -1,3 +1,4 @@
+<app-admin-dashboard></app-admin-dashboard>
 <div class=container>
     <h2 class=header>Update Product Price</h2>
     <form #productRef="ngForm" (ngSubmit)="updateProductInfo(productRef.value)">
@@ -5,9 +6,11 @@
         <input type="number" name="pid" ngModel/><br/>
         <label>Price</label><br>
         <input type="number" name="price" ngModel/><br/>
-        <br>
-        <input type="submit" value="Update Price"/>
-        <input type="button" value="back" (click)="onpress()">
+    
+        <div class="text-center py-4">
+            <button type="submit" value="Update Price" class="btn btn-danger mr-2">Update Price</button>
+            <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+        </div>
     </form>
     {{msg}}
 </div>

@@ -38,29 +38,35 @@
               <h2>Arogya Pharmacy</h2>
               </div>
               <p class="login-card-description">Register with Us.</p>
-              <form #userRef="ngForm" (ngSubmit)="addCustomerComponent(userRef.value)">
+              <form #userRef="ngForm" (ngSubmit)="addCustomerComponent(userRef.value)" class="needs-validation" novalidate> 
                   <div class="form-group mb-4">
                     <label for="Name" class="sr-only">Name</label>
-                    <input type="text" name="cust_name" class="form-control" placeholder="Name" ngModel  />
+                    <input type="text" name="cust_name" id="cust_name" class="form-control" placeholder="Name" ngModel required  oninvalid="this.setCustomValidity('Enter User Name Here')"
+                    oninput="this.setCustomValidity('')"/>
+                    <div class="invalid-feedback1" style="display: none;">Required</div>
+
                   </div>
                   <div class="form-group mb-4">
                     <label for="Address" class="sr-only">Address</label>
-                    <input type="text" name="cust_addr" class="form-control" placeholder="Address"  ngModel />
+                    <input type="text" name="cust_addr" class="form-control" placeholder="Address"  ngModel required/>
+                
                   </div>
                   <div class="form-group mb-4">
                     <label for="Phone" class="sr-only">Phone Number</label>
-                    <input type="number" name="cust_phone" class="form-control" placeholder="Phone Number" ngModel/>
+                    <input type="number" name="cust_phone" class="form-control" placeholder="Phone Number" ngModel required/>
                   </div>
                   <div class="form-group mb-4">
                     <label for="Username" class="sr-only">Username</label>
-                    <input type="text" name="cust_login" class="form-control"  placeholder="Username"  ngModel/>
+                    <input type="text" name="cust_login" class="form-control"  placeholder="Username"  ngModel  required/>
+                    <div class="invalid-feedback2" style="display: none;">Required</div>
                   </div>
                   <div class="form-group mb-4">
                     <label for="Password" class="sr-only">Password</label>
-                    <input type="password" name="pass" class="form-control" placeholder="Password" ngModel/>
+                    <input type="password" name="pass" class="form-control" placeholder="Password" ngModel required/>
+                    <div class="invalid-feedback3" style="display: none;"> Required</div>
                   </div>
                   <div class="form-group py-3">
-                  <input name="login" id="login" class="btn btn-block btn-info login-btn mb-4" type="submit" value="Register" [disabled]="!userRef.valid">
+                  <input [disabled]="!userRef.valid" class="btn btn-block btn-info login-btn mb-4" type="submit" value="Register" >
                   </div>
                 </form>
              {{msg}}
@@ -80,3 +86,24 @@
  </div>
  <!-- Copyright -->
  </footer>
+
+
+ <script type="text/javascript">
+(() => {
+  'use strict';
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation');
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>
