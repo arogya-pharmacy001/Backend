@@ -1,4 +1,5 @@
 
+
      <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white" style="background:rgb(13 8 8 / 52%) !important;">
         <a class="navbar-brand title" routerLink="customer" (click)="onClickHome()">Arogya Pharmacy</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,6 +28,20 @@
           </div>
         </nav>
   
+
+
+<!-- -->
+
+    <nav class="navbar navbar-dark bg-dark" style="background:rgb(13 8 8 / 52%) !important;">
+        <div class="container-fluid">
+          <a class="navbar-brand title" routerLink="Customer"  (click)="onClickHome()">Arogya Pharmacy</a>
+          <form class="d-flex dash-tab">
+            
+          </form>
+        </div>
+      </nav>
+
+
     <div class="container mt-5 mb-5">
         <div class="d-flex justify-content-center row">
             <div class="col-md-8">
@@ -37,10 +52,12 @@
 
                 <div *ngFor="let bill of billinfo">
                 <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                    <div class="mr-1"><img class="rounded" src="../../assets/medicine.jpg" width="70"></div>
-                    <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_name}}</span>
+                  <div class="mr-1"><img class="rounded" src="../../assets/medicine.jpg" width="70"></div>
+                   <!--   <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_name}}</span>-->
+                        <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_no}}</span>
                         <div class="d-flex flex-row product-desc">
-                            <div class="size mr-1"><span class="text-grey">Price:</span><span class="font-weight-bold">&nbsp;{{bill.amount}}</span></div>
+                            
+                            <div class="size mr-1"><span class="text-grey">Price:</span><span class="font-weight-bold">&nbsp;{{bill.price}}</span></div>
                             <div class="color"><span class="text-grey">quantity:</span><span class="font-weight-bold">&nbsp;{{bill.quantity}}</span></div>
                         </div>
                     </div>
@@ -58,6 +75,7 @@
     </div>
 </div>
 
+
 <footer class="text-center text-lg-start">
     <!-- Copyright -->
  <div class="text-center p-3">
@@ -66,3 +84,4 @@
  </div>
  <!-- Copyright -->
  </footer>
+

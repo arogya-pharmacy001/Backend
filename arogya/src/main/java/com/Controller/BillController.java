@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bean.Bill;
+import com.bean.Cartnation;
 import com.bean.cart;
 import com.service.BillService;
 
@@ -61,9 +62,17 @@ public class BillController {
 		return res;
 	
 	}
-	@GetMapping(value="findcust/{cust_id}",produces=MediaType.APPLICATION_JSON_VALUE)
+/*	@GetMapping(value="findcust/{cust_id}",produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<Bill> getBillbyCustID(@PathVariable("cust_id") int cust_id) {
 		return billService.findBycustIdservice(cust_id);
 	}
-
+*/
+	
+	
+	@GetMapping(value="findcust/{cust_id}",produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Cartnation> getBillbyCustID(@PathVariable("cust_id") int cust_id) {
+		return billService.findBycustIdservice(cust_id);
+	}
+	
+	
 }
