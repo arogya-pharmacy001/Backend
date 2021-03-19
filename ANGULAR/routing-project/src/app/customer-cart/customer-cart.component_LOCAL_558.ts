@@ -12,18 +12,12 @@ import { Customer } from '../customer.module';
 })
 export class CustomerCartComponent implements OnInit {
 
-
 cart = new cart;
 customer =new Customer;
 bill = new Bill;
-
-customer =new Customer;
-
 billinfo:Array<Bill>=[];
-//billinfo:Array<cartNation>=[];
-
-  constructor(public billService : BillService,public router:Router) { }
-
+msg:string="";
+constructor(public billService : BillService,public router:Router) { }
 
   ngOnInit(): void {
 

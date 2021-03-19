@@ -17,10 +17,10 @@
           </li> -->
             <li class="nav-item mx-2">
               <div class="dropdown">
-                <button class="dropbtn"><img src="../assets/profile-user.png"/></button>
+                <button class="dropbtn"><img src="../assets/profile-user.png"/>{{customer.cust_name}}</button>
                 <div class="dropdown-content">
                   <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="logout()">Logout</a>
-
+                 
               
                 </div>
               </div>
@@ -29,6 +29,13 @@
        
       </div>
     </nav>
+
+    
+<header class="text-center text-black py-5">
+  <h1 class="display-5 font-weight-bold mb-4">Thank You For Shopping With Us.</h1>
+
+ 
+</header>
 
 
 
@@ -42,3 +49,18 @@
  </div>
  <!-- Copyright -->
  </footer>
+
+
+
+
+ <!-- <div>
+  <h2>Find Bill By Id</h2>
+  <label for="">cust ID</label>
+  <input type="number" #cidRef/>
+  <input type="button" value="find Product" (click)="callService(cidRef.value)"/>
+  {{msg}}
+  <div >
+      Id is {{billRef.bill_id}}, Name is {{billRef.item_name}}
+  </div> 
+ 
+</div> -->

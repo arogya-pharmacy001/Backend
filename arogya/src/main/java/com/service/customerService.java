@@ -44,7 +44,7 @@ public class customerService {
 		else
 		{
 			customerRepository.save(cust);
-			return "Registration Successful";
+			return "Registration Successful!!";
 		}
 	}
 	
@@ -87,10 +87,12 @@ public class customerService {
 		for(Customer cust:listofC)
 		{
 			//if(cust.getCust_id()==c.getCust_id()) {
-			if((cust.getCust_login().equals(c.getCust_login()))||(cust.getPass().equals(c.getPass()))) {
+			if((cust.getCust_login().equals(c.getCust_login()))&&(cust.getPass().equals(c.getPass()))) {
 				cust1=cust;
+				flag=1;
 			}
 		}
+		
 		return cust1;
 	}
 

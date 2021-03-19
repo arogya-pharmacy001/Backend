@@ -19,39 +19,75 @@ msg:string="";
 
   addCustomerComponent(customer:Customer)
   {
-    console.log(customer.cust_name);
     this.registerService.addCustomer(customer).subscribe(data=>this.msg=data)
-    this.router.navigate(["login"])
-
-    //  let cname = customer.cust_name;
-    //  let caddr=customer.cust_addr;
-    //  let cphone=customer.cust_phone;
-    //  let cust_login=customer.cust_login;
-    //  let cpass=customer.pass;
-    //  let errorArray = [];
-
-
-    //  console.log("cname", cname);
-    //  console.log("caddr", caddr);
-
-    //  if (cname=='') 
-    //  {
-    //   $(".invalid-feedback1").show();
-    //  }
-    //  else  if (cust_login=='') 
-    //  {
-    //   $(".invalid-feedback2").show();
-    //  }
-    //  else  if ( cpass=='') 
-    //  {
-    //   $(".invalid-feedback3").show();
-    //  }
-    //  else if (cust_login!='' && caddr!='' && cust_login!='' && cpass!='')
-    //  {
-    //   this.router.navigate(["login"]);
-    //  }
+    setTimeout(() => {
+      this.router.navigate(["login"])
+    }, 1000);
   }
-  
+  // {
+  //   console.log(customer.cust_name);
+
+  //   let cname = customer.cust_name;
+  //   let caddr=customer.cust_addr;
+  //   let cphone=customer.cust_phone;
+  //   let cust_login=customer.cust_login;
+  //   let cpass=customer.pass;
+  //   if (cname=='') 
+  //    {
+  //     $(".invalid-feedback1").show();
+  //    }
+  //    if (caddr=='') 
+  //    {
+  //     $(".invalid-feedback2").show();
+  //    }
+  //    if (cphone=='') 
+  //    {
+  //     $(".invalid-feedback3").show();
+  //    }
+  //    if (cust_login=='') 
+  //    {
+  //     $(".invalid-feedback4").show();
+  //    }
+  //    if (cpass=='') 
+  //    {
+  //     $(".invalid-feedback5").show();
+  //    }
+  //     if (cname!='' ) 
+  //    {
+  //     $(".invalid-feedback1").hide();
+  //    }
+  //    if (caddr!='') 
+  //    {
+  //     $(".invalid-feedback2").hide();
+  //    }
+  //     if (cphone!='') 
+  //    {
+  //     $(".invalid-feedback3").hide();
+  //    }
+  //    if (cust_login!='') 
+  //    {
+  //     $(".invalid-feedback4").hide();
+  //    }
+  //    if (cpass!='') 
+  //    {
+  //     $(".invalid-feedback5").hide();
+  //    }
+
+  //     if(cname!='' && caddr!='' && cphone!='' && cust_login!='' && cpass!='')
+  //    {
+  //     $(".invalid-feedback1").hide();
+  //     $(".invalid-feedback2").hide();
+  //     $(".invalid-feedback3").hide();
+  //     $(".invalid-feedback4").hide();
+  //     $(".invalid-feedback5").hide();
+  //     this.registerService.addCustomer(customer).subscribe(data=>this.msg=data)
+  //     setTimeout(() => {
+  //       this.router.navigate(["login"])
+  //     }, 2000);
+      
+  //    }
+
+   
 
   onpress(){
 
@@ -60,6 +96,10 @@ msg:string="";
 
   onClickHome(){
     this.router.navigate([""]);
+  }
+
+  loginRedirect(){
+    this.router.navigate(["login"])
   }
 
 }

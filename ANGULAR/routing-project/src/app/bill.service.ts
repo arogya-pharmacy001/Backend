@@ -38,6 +38,7 @@ export class BillService {
 
   findBillbyCustId(id:any):Observable<any>
   {
+    console.log(id);
     return this.httpClient.get("http://localhost:9191/bill/findcust/"+id);
   }
 }

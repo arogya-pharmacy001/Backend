@@ -28,7 +28,7 @@ public List<Supplier> displaySupplier()
 public String addSupplier(Supplier sup)
 {
 		supplierRepository.save(sup);
-		return "SUPPLIER DETAILS ADDED !";
+		return "Request Successful!";
 }
 public List<Supplier> getSupplierTallyDetails() {
 	return supplierTallyDao.getSupplierTally();

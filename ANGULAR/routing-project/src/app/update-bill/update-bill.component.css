@@ -47,3 +47,7 @@ input, select, textarea {
   form{
     text-align: center;
   }
+  #msg{
+    text-align: center;
+    color: rgb(233, 8, 8);
+}

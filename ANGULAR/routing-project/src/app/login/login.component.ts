@@ -49,36 +49,78 @@ onClickHome(){
  
         this.customer.cust_login=user;
         this.customer.pass=pass;
+
+        var cradio =$('input[name="desg"]:checked').val();
+        console.log("cradio", cradio);
+
+    
+          if (user=='' && pass=='')
+          {  
+            $(".invalid-feedback1").show();
+            $(".invalid-feedback2").show();
+            $(".invalid-feedback3").show();
+          }
+         if (user!='' && pass=='')
+          {  
+            $(".invalid-feedback1").hide();
+            $(".invalid-feedback2").show();
+          }
+
+         if (user=='' && pass!='')
+          {  
+            $(".invalid-feedback2").hide();
+            $(".invalid-feedback1").show();
+          }
+          if (user!='' && pass!='')
+          {
+            $(".invalid-feedback1").hide();
+            $(".invalid-feedback2").hide();
+            $(".invalid-feedback3").show();
+          }
+
+          if (cradio=="admin" || cradio=="customer")
+          {  
+            console.log("if loop cradio", cradio);
+            $(".invalid-feedback3").hide();
+          }
+
+          if (user!='' && pass=='' && cradio!="admin" && cradio!="customer")
+          {  
+            $(".invalid-feedback2").show();
+            $(".invalid-feedback3").show();
+          }
+
+          if (user=='' && pass!='' && cradio!="admin" && cradio!="customer")
+          {  
+            $(".invalid-feedback1").show();
+            $(".invalid-feedback3").show();
+          }
+          if (user!='' && pass!='' && cradio=="admin")
+          {  
+            $(".invalid-feedback4").show();
+           
+          }
+          if (user!='' && pass!='' && cradio=="customer")
+          {  
+            $(".invalid-feedback4").show();
+           
+          }
+
+
+
     
         this.reg_service.checkLogin(this.customer).subscribe(obj=>{
           if(obj==null)
           {
             console.log("wrong pass / username");
             console.log("customer");
-            $("#errorMessage3").show();
-            $("#errorMessage1").hide();
-            $("#errorMessage2").hide();
-            
+          
           }
-          else if (user=='' && pass=='' && desig=='')
-          {  
-            $("#errorMessage1").show();
-            $("#errorMessage2").hide();
-            $("#errorMessage3").hide();
-          }
-         
+
           else{
-            if(desig=="customer" && user=='' && pass=='' )
+            
+            if(desig=="customer" && user!='' && pass!='' )
             {
-              $("#errorMessage1").show();
-            $("#errorMessage2").hide();
-            $("#errorMessage3").hide();
-            }
-            else if(desig=="customer" && user!='' && pass!='' )
-            {
-              $("#errorMessag2").show();
-              $("#errorMessage1").hide();
-              $("#errorMessage3").hide();
               console.log(obj);
               this.customer1=obj;
               sessionStorage.setItem("customer",JSON.stringify(obj));
@@ -86,22 +128,15 @@ onClickHome(){
             }
           
             else 
-            if(desig=="admin" && user=='' && pass=='' )
+          
+             if(desig=="admin" && user!='' && pass!='' )
             {
-              $("#errorMessag1").show();
-              $("#errorMessage2").hide();
-              $("#errorMessage3").hide();
-            }
-            else if(desig=="admin" && user!='' && pass!='' )
-            {
-              $("#errorMessag2").show();
-              $("#errorMessage1").hide();
-              $("#errorMessage3").hide();
                 console.log(obj);
                 this.customer1=obj;
                 sessionStorage.setItem("customer",JSON.stringify(obj));
                 this.router.navigate(["adminDashboard"]);
               }
+              
           }
         })
       }

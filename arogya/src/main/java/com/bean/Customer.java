@@ -10,7 +10,7 @@ public class Customer {
 	@Id
 	private int cust_id;
 	private String cust_name;
-	private long cust_phone;
+    private String cust_phone;
 	private String cust_addr;
 	private String cust_pass;
 	private String cust_login;
@@ -26,12 +26,7 @@ public class Customer {
 	public void setCust_name(String cust_name) {
 		this.cust_name = cust_name;
 	}
-	public long getCust_phone() {
-		return cust_phone;
-	}
-	public void setCust_phone(long cust_phone) {
-		this.cust_phone = cust_phone;
-	}
+
 	public String getCust_addr() {
 		return cust_addr;
 	}
@@ -49,6 +44,12 @@ public class Customer {
 	}
 	public void setCust_login(String cust_login) {
 		this.cust_login = cust_login;
+	}
+	public String getCust_phone() {
+		return cust_phone;
+	}
+	public void setCust_phone(String cust_phone) {
+		this.cust_phone = cust_phone;
 	}
 	@Override
 	public String toString() {

@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Bill } from '../bill.model';
 import { BillService } from '../bill.service';
+<<<<<<< HEAD
 import { cart } from '../cart.model';
+=======
+import { cartNation } from '../cartnation.model';
+>>>>>>> 9549c49fd663cda4b1ade76c36408163e716083f
 import { Customer } from '../customer.module';
 
 @Component({
@@ -12,17 +16,21 @@ import { Customer } from '../customer.module';
 })
 export class CustomerCartComponent implements OnInit {
 
-
 cart = new cart;
 customer =new Customer;
+<<<<<<< HEAD
 bill = new Bill;
+=======
 
-customer =new Customer;
-
-billinfo:Array<Bill>=[];
-//billinfo:Array<cartNation>=[];
+//billinfo:Array<Bill>=[];
+billinfo:Array<cartNation>=[];
 
   constructor(public billService : BillService,public router:Router) { }
+
+>>>>>>> 9549c49fd663cda4b1ade76c36408163e716083f
+billinfo:Array<Bill>=[];
+msg:string="";
+constructor(public billService : BillService,public router:Router) { }
 
 
   ngOnInit(): void {

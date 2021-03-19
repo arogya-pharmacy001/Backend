@@ -30,12 +30,12 @@ public class StockService {
 		
 		if(st.isPresent())
 		{
-			return "record already exist";
+			return "Product Exists";
 		}
 		else 
 		{
 			stockRepository.save(sk);
-			return "record stored";
+			return "Product Added Successfully";
 		}
 	}
 	
@@ -55,11 +55,11 @@ public class StockService {
 		if(st.isPresent())
 		{
 			stockRepository.deleteById(id);
-			return "Record deleted";
+			return "Product deleted";
 		}
 		else
 		{
-			return "Record not found";
+			return "Product not found";
 		}
 	}
 	
@@ -70,11 +70,11 @@ public class StockService {
 		if(op.isPresent())
 		{    
 			stockRepository.saveAndFlush(sk);
-			return "Updated ";
+			return " Product Updated ";
 		}
 		else
 		{
-			return "Record not found";
+			return "Product not found";
 		}
 	}
 	
