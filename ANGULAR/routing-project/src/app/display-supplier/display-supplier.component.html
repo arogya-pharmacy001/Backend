@@ -6,18 +6,14 @@
         <table id="bills">
             <tr>
                 <th>Item Name</th>
-                <th>Expiry</th>
                 <th>Quantity</th>
-                <th>Price</th>
                 <th>Type</th>
                 <th>Delivery Date</th>
             </tr>
 
             <tr *ngFor="let supplier of supplierInfo">
                 <td>{{supplier.item_name}}</td>
-                <td>{{supplier.expiry}}</td>
                 <td>{{supplier.quantity}}</td>
-                <td>{{supplier.price}}</td>
                 <td>{{supplier.type}}</td>
                 <td>{{supplier.delivery_date}}</td>
 

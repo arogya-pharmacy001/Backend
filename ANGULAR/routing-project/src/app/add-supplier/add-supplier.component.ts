@@ -13,9 +13,7 @@ export class AddSupplierComponent implements OnInit {
   msg:string=""
   supplierInfo = new FormGroup({
     item_name:new FormControl(),
-    expiry:new FormControl(),
     quantity:new FormControl(),
-    price:new FormControl(),
     type:new FormControl(),
     delivery_date:new FormControl()
   })
